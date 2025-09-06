@@ -1,0 +1,2382 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+
+	<meta charset="UTF-8">
+<script>
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+</script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- wp_head -->
+	<title>AI Makerspace &#x2d; The AI Engineering Bootcamp</title>
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+<!-- The SEO Framework by Sybre Waaijer -->
+<meta name="robots" content="max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+<link rel="canonical" href="https://aimakerspace.io/the-ai-engineering-bootcamp/" />
+<meta name="description" content="The world’s leading community for people who want to build, ship, and share production LLM applications. Highest rated AI Engineer Bootcamp available!" />
+<meta name="theme-color" content="#0057a3" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="AI Makerspace" />
+<meta property="og:title" content="The AI Engineering Bootcamp" />
+<meta property="og:description" content="The world’s leading community for people who want to build, ship, and share production LLM applications. Highest rated AI Engineer Bootcamp available!" />
+<meta property="og:url" content="https://aimakerspace.io/the-ai-engineering-bootcamp/" />
+<meta property="og:image" content="https://aimakerspace.io/wp-content/uploads/AI-Makerspace-Open-Graph.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@aimakerspace" />
+<meta name="twitter:title" content="The AI Engineering Bootcamp" />
+<meta name="twitter:description" content="The world’s leading community for people who want to build, ship, and share production LLM applications. Highest rated AI Engineer Bootcamp available!" />
+<meta name="twitter:image" content="https://aimakerspace.io/wp-content/uploads/AI-Makerspace-Open-Graph.png" />
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://aimakerspace.io/#/schema/WebSite","url":"https://aimakerspace.io/","name":"AI Makerspace","inLanguage":"en-US","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://aimakerspace.io/search/{search_term_string}/"},"query-input":"required name=search_term_string"},"publisher":{"@type":"Organization","@id":"https://aimakerspace.io/#/schema/Organization","name":"AI Makerspace","url":"https://aimakerspace.io/","sameAs":["https://x.com/AIMakerspace","https://www.youtube.com/@AI-Makerspace","https://www.linkedin.com/company/ai-maker-space/"],"logo":"https://aimakerspace.io/wp-content/uploads/ai-makerspace-schema-default.png"}},{"@type":"WebPage","@id":"https://aimakerspace.io/the-ai-engineering-bootcamp/","url":"https://aimakerspace.io/the-ai-engineering-bootcamp/","name":"AI Makerspace &#x2d; The AI Engineering Bootcamp","description":"The world’s leading community for people who want to build, ship, and share production LLM applications. Highest rated AI Engineer Bootcamp available!","inLanguage":"en-US","isPartOf":{"@id":"https://aimakerspace.io/#/schema/WebSite"},"breadcrumb":{"@type":"BreadcrumbList","@id":"https://aimakerspace.io/#/schema/BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":"https://aimakerspace.io/","name":"AI Makerspace"},{"@type":"ListItem","position":2,"name":"The AI Engineering Bootcamp"}]},"potentialAction":{"@type":"ReadAction","target":"https://aimakerspace.io/the-ai-engineering-bootcamp/"}}]}</script>
+<!-- / The SEO Framework by Sybre Waaijer | 27.69ms meta | 1.53ms boot -->
+
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<style id='woocommerce-inline-inline-css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='brands-styles-css' href='https://aimakerspace.io/wp-content/plugins/woocommerce/assets/css/brands.css?ver=10.1.2' media='all' />
+<link rel='stylesheet' id='picostrap-styles-css' href='https://aimakerspace.io/wp-content/themes/aimakerspace/css-output/bundle.css?ver=104' media='all' />
+<script id="breeze-prefetch-js-extra">
+var breeze_prefetch = {"local_url":"https:\/\/aimakerspace.io","ignore_remote_prefetch":"1","ignore_list":["\/shop\/cart\/","\/shop\/checkout\/","\/shop\/my-account\/","\/the-ai-engineering-bootcamp\/application\/","wp-admin","wp-login.php"]};
+</script>
+<script src="https://aimakerspace.io/wp-content/plugins/breeze/assets/js/js-front-end/breeze-prefetch-links.min.js?ver=2.2.17" id="breeze-prefetch-js"></script>
+<script id="WCPAY_ASSETS-js-extra">
+var wcpayAssets = {"url":"https:\/\/aimakerspace.io\/wp-content\/plugins\/woocommerce-payments\/dist\/"};
+</script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+<script src="https://www.googletagmanager.com/gtag/js?id=GT-TX9JQXBB" id="google_gtagjs-js" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["aimakerspace.io"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-TX9JQXBB");
+</script>
+<script src="https://aimakerspace.io/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://aimakerspace.io/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="preload" as="font" type="font/woff2" href="https://aimakerspace.io/wp-content/themes/picostrap5/assets/fonts/poppins-v22-latin-200.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://aimakerspace.io/wp-content/themes/picostrap5/assets/fonts/poppins-v22-latin-regular.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://aimakerspace.io/wp-content/themes/picostrap5/assets/fonts/poppins-v22-latin-600.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="https://aimakerspace.io/wp-content/themes/picostrap5/assets/fonts/poppins-v22-latin-800.woff2" crossorigin>
+<meta name="generator" content="Site Kit by Google 1.160.1" /><link rel="preload" href="/wp-content/themes/aimakerspace/fonts/poppins-v22-latin-200.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/wp-content/themes/aimakerspace/fonts/poppins-v22-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/wp-content/themes/aimakerspace/fonts/poppins-v22-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet"  href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css"/>
+<meta name="theme-color" content="#0a1347" />
+		<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<link rel="icon" href="https://aimakerspace.io/wp-content/uploads/aim-logo-favicon-512-100x100.webp" sizes="32x32" />
+<link rel="icon" href="https://aimakerspace.io/wp-content/uploads/aim-logo-favicon-512-300x300.webp" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://aimakerspace.io/wp-content/uploads/aim-logo-favicon-512-300x300.webp" />
+<meta name="msapplication-TileImage" content="https://aimakerspace.io/wp-content/uploads/aim-logo-favicon-512-300x300.webp" />
+	<!-- /wp_head -->
+</head>
+
+<body class="wp-singular page-template page-template-landing-page page-template-landing-page-php page page-id-2094 page-parent wp-custom-logo wp-embed-responsive wp-theme-picostrap5 wp-child-theme-aimakerspace theme-picostrap5 lc-custom-header lc-custom-footer woocommerce-no-js is-using-livecanvas">
+	
+	
+
+
+<header id='lc-header'><div id="top-message" class="gradient-light-blue-main-blue px-2 py-4 text-center hide-on-countdown">
+	<p class="mb-0 rfs-8 fw-semibold text-white lh-1"><span class="fw-bold text-yellow">HURRY!</span> Cohort 08 launches Septebmer 9th - <a href="../../../../../the-ai-engineering-bootcamp/" class="text-white">Enroll Now</a>!</p>
+</div>
+<div class="px-4">
+	<nav class="navbar navbar-expand-lg py-3 navbar-light">
+		<div class="container-fluid">
+			<a class="navbar-brand track-click" data-track-name="nav_image_home" href="https://aimakerspace.io/">
+				<img src="https://aimakerspace.io/wp-content/uploads/logo_horiz_header.webp" height="50" width="300" class="align-middle me-0 img-fluid track-click" data-track-name="nav_logo_home" alt="AI Makerspace" style="max-width:200px;">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar1" aria-controls="myNavbar1" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="myNavbar1">
+				<div  class="live-shortcode ms-auto me-4">
+					 <!--  lc_nav_menu --> <ul id="menu-primary" class="navbar-nav"><li  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2094 current_page_item current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children dropdown nav-item nav-item-2443"><a rel="main_nav_bootcamp" href="https://aimakerspace.io/the-ai-engineering-bootcamp/" class="nav-link active">The AI Engineering Bootcamp</a>
+<ul class="dropdown-menu  depth_0">
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2094 current_page_item nav-item nav-item-3781"><a href="https://aimakerspace.io/the-ai-engineering-bootcamp/" class="dropdown-item active">Overview</a></li>
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-3469"><a rel="main_nav_application" href="https://aimakerspace.io/the-ai-engineering-bootcamp/application/" class="dropdown-item ">The Application</a></li>
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-3470"><a rel="main_nav_challenge" href="https://aimakerspace.io/the-ai-engineering-bootcamp/aie-challenge/" class="dropdown-item ">The Challenge</a></li>
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-4365"><a href="https://aimakerspace.io/certification/" class="dropdown-item ">The Certification</a></li>
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-3823"><a href="https://aimakerspace.io/the-ai-engineering-bootcamp/mastermind/" class="dropdown-item ">The Mastermind</a></li>
+</ul>
+</li>
+<li  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown nav-item nav-item-2786"><a rel="main_nav_selfpaced" href="https://aimakerspace.io/self-paced-learning/" class="nav-link ">Self-Paced Learning</a>
+<ul class="dropdown-menu  depth_0">
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-3643"><a rel="main_nav_llm_foundation" href="https://aimakerspace.io/self-paced-learning/llm-foundations/" class="dropdown-item ">LLM Foundations</a></li>
+	<li  class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-3642"><a rel="main_nav_llm_engineering" href="https://aimakerspace.io/self-paced-learning/llm-engineering/" class="dropdown-item ">LLM Engineering</a></li>
+</ul>
+</li>
+<li  class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-2445"><a target="_blank" rel="main_nav_newsletter" href="https://newsletter.aimakerspace.io" class="nav-link ">The LLM Edge Newsletter</a></li>
+<li  class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-3422"><a rel="main_nav_teams" href="https://aimakerspace.io/team-training/" class="nav-link ">Team Training</a></li>
+<li  class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-3468"><a rel="main_nav_aboutus" href="https://aimakerspace.io/our-story/" class="nav-link ">About Us</a></li>
+</ul> <!-- /lc_nav_menu --> 
+				</div>
+				<div class="">
+					<!-- SWAG SHOP -->
+					<a class="text-decoration-none track-click" data-track-name="nav_icon_shop" href="../../../../shop" target="_blank" rel="noopener">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="20px" fill="#0057A3" class="wiggle mx-1" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0M14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1M8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132"/>
+						</svg>
+					</a>
+
+					<!-- YOUTUBE -->
+					<a class="text-decoration-none track-click" data-track-name="nav_icon_youtube" href="https://bit.ly/3TKhXUg" target="_blank" rel="noopener">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="#FF0000" class="wiggle mx-1" viewBox="0 0 16 16">
+							<path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"></path>
+						</svg>
+					</a>
+
+					<!-- DISCORD -->
+					<a class="text-decoration-none track-click" data-track-name="nav_icon_discord" href="https://bit.ly/aim-discord-footer" target="_blank" rel="noopener">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="#5865F2" class="wiggle mx-1" viewBox="0 0 16 16">
+							<path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"></path>
+						</svg>
+					</a>
+
+					<!-- GITHUB -->
+					<a class="text-decoration-none track-click" data-track-name="nav_icon_github" href="https://bit.ly/aimindex" target="_blank" rel="noopener">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="20px" fill="#2b3137" class="wiggle mx-1" viewBox="0 0 16 16">
+							<path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div></header>
+
+
+
+	<main id='theme-main'>
+
+<!-- Navbar -->
+<style>
+body {overflow-x:hidden; }
+
+    /* Navbar styles */
+    #floatingNavbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        display: none; /* Hidden by default */
+        transition: all 0.3s ease;
+        background-color: #f8f9fa; /* Light background for visibility */
+    }
+</style>
+<!-- Floating Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-sticky shadow" id="floatingNavbar">
+	<div class="container">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav rfs-6 text-uppercase align-items-center">
+				<li class="nav-item px-2">
+					<a class="nav-link track-click" data-track-name="bootcamp_subnav_text_curriculum" href="#curriculum">Curriculum</a>
+				</li>
+				<li class="nav-item px-2">
+					<a class="nav-link track-click" data-track-name="bootcamp_subnav_text_testimonials" href="#testimonials">Testimonials</a>
+				</li>
+				<li class="nav-item px-2">
+					<a class="nav-link track-click" data-track-name="bootcamp_subnav_text_instructors" href="#instructors">Instructors</a>
+				</li>
+				<li class="nav-item px-2">
+					<a class="nav-link track-click" data-track-name="bootcamp_subnav_text_freecourse" href="#freeCourse">Free Course</a>
+				</li>
+				<li class="nav-item px-2">
+					<a class="nav-link track-click" data-track-name="bootcamp_subnav_text_faq" href="#faq">FAQ</a>
+				</li>
+				<li class="nav-item px-2">
+					<a class="nav-link gradient-light-blue-deep-blue py-2 px-3 rounded text-white track-click" data-track-name="bootcamp_subnav_btn_apply" href="application/">Apply Now</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<section class="bg-hex py-4 py-md-6 py-xxl-7 big-shadow z-3">
+	<div class="container">
+		<div class="row justify-content-center mb-4">
+			<div class="col-12 col-lg-9 text-center">
+				<h1 class="rfs-26 text-uppercase fw-bold text-white"><span class="text-yellow">The</span> AI Engineering Bootcamp</h1>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-12 col-lg-9 text-center">
+				<p class="text-white rfs-9 fw-light">Build and evaluate <span class="fw-semibold text-yellow">production</span> RAG, agent, and multi-agent applications with an industry-leading <span class="fw-semibold text-yellow">AI Engineer certification</span> in just 10 weeks, from prototype to production.</p>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-4">
+			<div class="col-10 col-md-6 text-center">
+				    <div class="text-white" style="position: relative;">
+
+        <div id="seatMessage" class="text-center mb-2 text-white">
+            <span class="fw-semibold text-uppercase rfs-7 text-white">
+                Seats remaining in cohort 8            </span>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; position: relative;">
+            <span id="seatsSoldNumber" class="text-white">43</span>
+
+            <div id="progressBarContainer" style="flex-grow: 1; margin: 0 10px; background-color: #e0e0e0; height: 25px; border-radius: 4px; overflow: hidden; position: relative;">
+                <div id="seatProgressBar" style="
+                    height: 100%;
+                    width: 0;
+                    background-color: #FFD027;
+                    background-image: linear-gradient(
+                        to bottom,
+                        #d1aa00,
+                        #ffe066 50%,
+                        #d1aa00
+                    );
+                    transition: width 0.5s, background-color 0.3s, background-image 0.3s;
+                    border-radius: 4px 0 0 4px;
+                    overflow: hidden;
+                    position: relative;
+                    z-index: 5;
+                ">
+                </div>
+            </div>
+
+            <span id="seatsAvailable" class="text-white">70</span>
+
+            <div id="remainingBubble" class="bg-light-300" style="
+                position: absolute;
+                top: 40px;
+                left: 0;
+                padding: 1px 9px;
+                font-weight: 600;
+                border-radius: 4px;
+                white-space: nowrap;
+                pointer-events: none;
+                user-select: none;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+                transition: left 0.5s ease;
+                z-index: 10;
+            ">
+                <span id="remainingNumber" class="text-light-blue">27</span>
+                <div style="
+                    position: absolute;
+                    top: -8px;
+                    left: 50%;
+                    width: 0;
+                    height: 0;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid transparent;
+                    border-bottom: 8px solid #f0f0f0;
+                    transform: translateX(-50%);
+                "></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+    (function() {
+        const totalSeats = 70;
+        let seatsSold = 43;
+        const seatsSoldNumber = document.getElementById('seatsSoldNumber');
+        const seatsAvailableSpan = document.getElementById('seatsAvailable');
+        const remainingBubble = document.getElementById('remainingBubble');
+        const remainingNumber = document.getElementById('remainingNumber');
+        const progressBar = document.getElementById('seatProgressBar');
+        const progressBarContainer = document.getElementById('progressBarContainer');
+
+        const seatsLeftStartClass = 'text-light-blue';
+        const seatsLeftWarningClass = 'text-red';
+
+        function updateProgressBar(sold) {
+            if (sold > totalSeats) sold = totalSeats;
+            if (sold < 0) sold = 0;
+
+            const seatsLeft = totalSeats - sold;
+            const percentFilled = (sold / totalSeats) * 100;
+            progressBar.style.width = percentFilled + '%';
+
+            if (seatsLeft <= 15) {
+                progressBar.style.backgroundColor = '#D64541';
+                progressBar.style.backgroundImage = 'linear-gradient(180deg, rgba(160,45,45,0.7) 0%, rgba(214,69,65,0.95) 50%, rgba(160,45,45,0.7) 100%)';
+            } else {
+                progressBar.style.backgroundColor = '#FFD027';
+                progressBar.style.backgroundImage = 'linear-gradient(to bottom, #d1aa00, #ffe066 50%, #d1aa00)';
+            }
+
+            seatsSoldNumber.textContent = sold;
+            seatsAvailableSpan.textContent = totalSeats;
+            remainingNumber.textContent = seatsLeft;
+
+            if (seatsLeft <= 10) {
+                remainingNumber.classList.remove(seatsLeftStartClass);
+                remainingNumber.classList.add(seatsLeftWarningClass);
+            } else {
+                remainingNumber.classList.remove(seatsLeftWarningClass);
+                remainingNumber.classList.add(seatsLeftStartClass);
+            }
+
+            const containerRect = progressBarContainer.getBoundingClientRect();
+            const containerWidth = containerRect.width;
+
+            const unfilledStart = (percentFilled / 100) * containerWidth;
+            const unfilledWidth = containerWidth - unfilledStart;
+            const bubblePos = unfilledStart + unfilledWidth / 2;
+
+            const bubbleWidth = remainingBubble.offsetWidth || 0;
+
+            remainingBubble.style.left = (bubblePos - bubbleWidth / 2 + 22) + 'px';
+        }
+
+        updateProgressBar(43);
+        window.updateProgressBar = updateProgressBar;
+    })();
+    </script>
+    
+			</div>
+		</div>
+
+
+	</div>
+</section>
+
+<section><div class="container-fluid p-0">
+	<div class="logo-carousel" aria-label="Comprehensive Company Logo Carousel">
+		<div class="logo-carousel-track">
+			<!-- First full set of logos -->
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-meta-1.webp" alt="Meta Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-spacex-1.webp" alt="SpaceX Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-shopify-1.webp" alt="Shopify Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-amazon-1.webp" alt="Amazon Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-jpmc-1.webp" alt="JP Morgan Chase Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-ibm-1.webp" alt="IBM Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-usaf-1.webp" alt="US Air Force Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-docusign-1.webp" alt="DocuSign Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-adobe-1.webp" alt="Adobe Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-linkedin-1.webp" alt="LinkedIn Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-wellsfargo-1.webp" alt="Wells Fargo Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-statefarm-1.webp" alt="State Farm Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-vmware-1.webp" alt="VMware Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-wandb-1.webp" alt="Weights & Biases Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-ford-1.webp" alt="Ford Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-levis-1.webp" alt="Levi's Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-fidelity-1.webp" alt="Fidelity Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-workday-1.webp" alt="Workday Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-brg-1.webp" alt="BRG Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-atlassian-1.webp" alt="Atlassian Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-otter-1.webp" alt="Otter Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-pearson-1.webp" alt="Pearson Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-tdbank-1.webp" alt="TD Bank Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-teamsnap-1.webp" alt="TeamSnap Logo" loading="lazy">
+			</div>
+
+			<!-- Repeated sets for continuous scrolling -->
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-meta-1.webp" alt="Meta Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-spacex-1.webp" alt="SpaceX Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-shopify-1.webp" alt="Shopify Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-amazon-1.webp" alt="Amazon Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-jpmc-1.webp" alt="JP Morgan Chase Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-ibm-1.webp" alt="IBM Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-usaf-1.webp" alt="US Air Force Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-docusign-1.webp" alt="DocuSign Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-adobe-1.webp" alt="Adobe Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-linkedin-1.webp" alt="LinkedIn Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-wellsfargo-1.webp" alt="Wells Fargo Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-statefarm-1.webp" alt="State Farm Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-vmware-1.webp" alt="VMware Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-wandb-1.webp" alt="Weights & Biases Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-ford-1.webp" alt="Ford Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-levis-1.webp" alt="Levi's Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-fidelity-1.webp" alt="Fidelity Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-workday-1.webp" alt="Workday Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-brg-1.webp" alt="BRG Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-atlassian-1.webp" alt="Atlassian Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-otter-1.webp" alt="Otter Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-pearson-1.webp" alt="Pearson Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-tdbank-1.webp" alt="TD Bank Logo" loading="lazy">
+			</div>
+			<div class="logo-slide">
+				<img src="../../../wp-content/uploads/slider-logo-teamsnap-1.webp" alt="TeamSnap Logo" loading="lazy">
+			</div>
+		</div>
+	</div>
+</div></section>
+
+<section class="d-none bg-ghost py-4 py-xl-6">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-11 col-xl-9">
+				<h2 class="text-uppercase fw-bold rfs-20 mw-lg-7">The Most <span class="text-main-blue">Competitive</span> Bootcamp you can join</h2>
+			</div>
+		</div>
+		<div class="row mt-4 justify-content-center">
+			<div class="col-11 col-xl-4">
+				<p class="rfs-8 mb-0">This course is challenging to get into because AI Engineer roles are challenging to succeed in. Unlike other training programs, <span class="fw-semibold text-main-blue">you must</span> demonstrate your willingness to build, ship, and share on a deadline before you enroll.</p>
+			</div>
+			<div class="col-11 col-xl-4 offset-xl-1">
+				<p class="rfs-8 mb-0">Return on Investment for AI training is not easy - for individuals or companies - but it <span class="fw-semibold text-main-blue">is</span> possible. It just requires the right curriculum, community, and a shared vision of the future.</p>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-1 g-6 align-items-stretch">
+			<div class="col-11 col-lg-3 d-flex">
+				<div class="card border bg-white flex-fill">
+					<div class="card-body text-center">
+						<i class="bi bi-list-check rfs-20 text-main-blue"></i>
+						<p class="rfs-9 fw-semibold text-main-blue text-uppercase mb-1">Acceptance Rate</p>
+						<h4>22%</h4>
+						<p class="mt-2 small mb-0">For people who are <span class="fw-semibold">laser focused</span> on learning. <br><a class="track-click text-main-blue fst-italic" data-track-name="bootcamp_text_modal-linkedin-acceptance-post" data-bs-toggle="modal" data-bs-target="#acceptanceRate">Why this matters!</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-11 col-lg-3 d-flex">
+				<div class="card border shadow flex-fill">
+					<div class="card-body text-center">
+						<i class="bi bi-award rfs-20 text-main-blue"></i>
+						<p class="rfs-9 fw-semibold text-main-blue text-uppercase mb-1">Certification Rate<sup class="text-muted">*</sup></p>
+						<h4>78%</h4>
+						<p class="mt-2 small mb-0">Quality input means <span class="fw-semibold">quality</span> output</p>
+						<p class="mb-0 mt-2 text-center text-muted rfs-6 fst-italic">*Estimate for Cohort 7</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-11 col-lg-3 d-flex">
+				<div class="card border bg-white flex-fill">
+					<div class="card-body text-center">
+						<i class="bi bi-file-easel rfs-20 text-main-blue"></i>
+						<p class="rfs-9 fw-semibold text-main-blue text-uppercase mb-1">Demo Day Pitch</p>
+						<h4>22%</h4>
+						<p class="mt-2 small mb-0">Students who <span class="fw-semibold">qualify</span> to present on Demo Day<br><a class="track-click text-main-blue fst-italic" data-track-name="bootcamp_text_demo-day-process" href="https://absorbing-toaster-713.notion.site/Demo-Day-Selection-Process-254cd547af3d80258d06d48693bd5ec3">Qualification criteria</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-6 justify-content-center">
+			<div class="col-11 col-xl-9">
+				<p class="rfs-8"><a href="/application" class="track-click fw-semibold" data-track-name="bootcamp_s1_apply">Join the next cohort</a> of our flagship bootcamp, or let us help you <a href="../../../../../team-training/" class="track-click fw-semibold" data-track-name="bootcamp_s1_teams">build your very own.</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section id="curriculum" class="py-4 py-xl-6" data-bs-spy="scroll" data-bs-target="#floatingNavbar" data-bs-offset="0" tabindex="0">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-11 col-xl-5 col-xxl-4 align-content-center">
+				<h2 class="text-uppercase fw-bold rfs-20">Course <span class="text-main-blue">Curriculum</span></h2>
+				<p class="rfs-8">Stay at the edge of <b>building</b>, <b>evaluating</b>, <b>deploying</b>, <b>operating</b>, and <b>improving</b> production LLM, <span class="fw-semibold text-main-blue">RAG</span>, <span class="fw-semibold text-main-blue">Agent</span>, and <span class="fw-semibold text-main-blue">Multi-Agent</span> applications, from concepts to code, <i>always with the latest tools and best practices</i>.</p>
+			</div>
+			<div class="col-11 col-xl-4 offset-xl-1 mt-4 mt-xl-0 align-content-center">
+				<div class="card shadow border-0">
+					<div class="card-body text-center">
+						<p class="rfs-6 fw-semibold text-uppercase lh-1 my-3">Industry-leading tooling, LLMs, frameworks &amp; infrastructure</p>
+						<div class="row p-1 pb-3 row-cols-3 row-gap-3 row-cols-md-5 text-center justify-content-center">
+							<div class="col align-content-center">
+								<img src="../wp-content/uploads/rev2_logo_cursor.webp" alt="AI Makerspace Engineering Bootcamp learn Cursor" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center">
+								<img src="../wp-content/uploads/rev2_logo_claude.webp" alt="AI Makerspace Engineering Bootcamp learn Claude" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center d-none d-md-block">
+								<img src="../wp-content/uploads/rev2_logo_uv.webp" alt="AI Makerspace Engineering Bootcamp learn Astral UV" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center d-none d-md-block">
+								<img src="../wp-content/uploads/rev2_logo_open-ai.webp" alt="AI Makerspace Engineering Bootcamp learn OpenAI build your own ChatGPT" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center d-none d-md-block">
+								<img src="../wp-content/uploads/tools_logo_together.webp" alt="AI Makerspace Engineering Bootcamp learn Together AI" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center d-none d-md-block">
+								<img src="../wp-content/uploads/rev2_logo_langchain.webp" alt="AI Makerspace Engineering Bootcamp learn LangChain" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center">
+								<img src="../wp-content/uploads/rev2_logo_langgraph.webp" alt="AI Makerspace Engineering Bootcamp learn LangGraph" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center d-none d-md-block">
+								<img src="../wp-content/uploads/rev2_logo_langsmith.webp" alt="AI Makerspace Engineering Bootcamp learn LangSmith" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center">
+								<img src="../wp-content/uploads/rev2_logo_qdrant.webp" alt="AI Makerspace Engineering Bootcamp learn qDrant" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center">
+								<img src="../wp-content/uploads/rev2_logo_ragas.webp" alt="AI Makerspace Engineering Bootcamp learn RAGAS" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center d-none d-md-block">
+								<img src="https://aimakerspace.io/wp-content/uploads/182288589-e1752340396553.png" class="img-fluid w-100 h-auto wp-image-3719" width="100" height="100">
+							</div>
+							<div class="col align-content-center d-none d-md-block">
+								<img src="../wp-content/uploads/rev2_logo_cohere.webp" alt="AI Makerspace Engineering Bootcamp learn Cohere" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center d-none d-md-block">
+								<img src="../wp-content/uploads/tools_logo_vercel.webp" alt="AI Makerspace Engineering Bootcamp learn Vercel" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center">
+								<img src="../wp-content/uploads/rev2_logo_ollama.webp" alt="AI Makerspace Engineering Bootcamp learn oLLama" width="185" height="130" class="img-fluid w-100 h-auto">
+							</div>
+							<div class="col align-content-center d-none d-md-block">
+								<img src="https://aimakerspace.io/wp-content/uploads/140440022.png" width="460" height="460" class="img-fluid w-100 h-auto wp-image-3721" srcset="https://aimakerspace.io/wp-content/uploads/140440022.png 460w, https://aimakerspace.io/wp-content/uploads/140440022-300x300.png 300w, https://aimakerspace.io/wp-content/uploads/140440022-100x100.png 100w">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- WHATS NEW ROW -->
+		<div class="row py-5 justify-content-center mt-4">
+			<style>
+						.curriculum-old li, .curriculum-new li {
+						  list-style-type: none;
+						  position: relative;
+						  padding-left: 1.5rem;
+						  margin-left: .5rem;
+						}
+						
+						.curriculum-old li::before {
+						  content: "\F623"; /* Bootstrap Icons' X character */
+						  font-family: "bootstrap-icons";
+						  position: absolute;
+						  left: 0;
+						  top:2px;
+						  color: #F8312F; /* Bootstrap's gray */
+						  font-size: 1rem;
+						}
+						.curriculum-new li::before {
+						  content: "\F270"; /* Bootstrap Icons' X character */
+						  font-family: "bootstrap-icons";
+						  position: absolute;
+						  left: 0;
+						  top:2px;
+						  color: #00D26A; /* Bootstrap's gray */
+						  font-size: 1rem;
+						}
+					</style>
+			<div class="col-11 col-xl-4 justify-content-center text-center">
+				<!-- CURRICULUM GATE -->
+				<div class="px-7">
+					<a type="button" class="btn btn-primary text-uppercase border-0 shadow mt-3 py-3 px-4 track-click" data-track-name="bootcamp_btn_fullcurriculum" href="https://bit.ly/aie8-curr" target="_blank" rel="noopener">
+						Check out the Curriculum Details
+					</a>
+					<p class="mt-2"><i>Access foundational papers, up-to-date blogs, protocol specs, tools, docs, and more!</i></p>
+				</div>
+			</div>
+			<div class="col-11 col-xl-5 col-xxl-5 align-content-center bg-ghost p-4 rounded-3 mb-5">
+				<p class="rfs-9 fw-semibold">New Curriculum Additions to Cohort 8 (Sept - Nov, 2025)</p>
+				<ul class="curriculum-new">
+					<li><em>🛠️ <a href="https://fabulous-producer-5917.kit.com/posts/context-engineering-for-agents?_gl=1*162emyx*_gcl_au*MjA1OTgxNjg4Ni4xNzUxMzIzNDMyLjM5MDc4MDE0LjE3NTcxMjAzMzYuMTc1NzEyMDQzMQ.." target="_blank"><b>Context Engineering</b></a>, Level 0 (Prompting), Level 1 (RAG), Level 3 (Agents), and Advanced Context Engineering!</em></li>
+					<li>🤯 <a href="https://openai.com/index/why-language-models-hallucinate/" target="_blank"><b>Why LLMs Hallucinate</b></a> (Sept 2025)</li>
+					<li>🧩 <a href="https://arxiv.org/abs/2508.21038" target="_blank"><b>The Limitations of Dense Vector Retrieval</b></a> (Sept 2025)</li>
+					<li>🌐 Open-source models &amp; embeddings <em>introduced much earlier</em> (with <a href="https://huggingface.co/blog/embeddinggemma" target="_blank"><b>EmbeddingGemma</b></a> and <a href="https://ollama.com/library/embeddinggemma" target="_blank"><b>ollama</b></a>)</li>
+					<li>⚡ <a href="https://forum.langchain.com/t/langchain-1-0-alpha-feedback-wanted/1436" target="_blank"><b>LangChain v1.0 alpha</b></a></li>
+					<li>🤖 <a href="https://blog.langchain.com/deep-agents/" target="_blank"><b>Deep Agents</b></a></li>
+					<li>📊 <a href="https://blog.ragas.io/evaluating-the-evaluators" target="_blank"><b>Evaluating the Evaluators</b></a> (Aug 2025) &amp; <a href="https://www.sh-reya.com/blog/in-defense-ai-evals/" target="_blank"><b>In Defense of Evals</b></a> (Sep 2025)</li>
+					<li>🏆 Demo Day <a href="https://www.notion.so/Demo-Day-Selection-Process-254cd547af3d80258d06d48693bd5ec3?pvs=21" target="_blank"><b>Semi-Final Competition</b></a> Round</li>
+					<li> A brand new <b><a href="https://www.linkedin.com/feed/update/urn:li:activity:7369425852385640449/" target="_blank">primary cohort use case</a></b> that builds on itself and runs throughout the cohort</li>
+				</ul>
+			</div>
+
+			<div class="col-11 col-xl-4 justify-content-center text-center">
+				<!-- CURRICULUM GATE -->
+				<div class="px-7">
+					<a type="button" class="btn text-uppercase border-0 shadow mt-4 py-3 px-4 track-click" data-track-name="bootcamp_btn_usecases" href="https://bit.ly/aie7-use-cases" target="_blank" rel="noopener" style="background-color: #28a745; color: #fff;">
+						Learn about 2025 Industry Use Cases
+					</a>
+					<p class="mt-2"><i>Experience an example of an overview <b> session sheet</b> from Cohort 7!</i></p>
+				</div>
+			</div>
+			<div class="col-11 col-xl-5 col-xxl-5 align-content-center bg-ghost p-4 rounded-3">
+				<p class="rfs-9 fw-semibold">New Curriculum Additions to Cohort 7 (June-Aug, 2025) </p>
+				<ul class="curriculum-new">
+					<li> <b><a href="https://www.youtube.com/live/lfEbzQFyS9U?si=ceUy96LTL3l-p1Vb" target="_blank">Context Engineering</a></b> from first principles</li>
+					<li> A <b>primary cohort use case</b> that builds on itself and runs throughout the cohort</li>
+					<li> Expansion of <b>Model Context Protocol</b> (MCP) content </li>
+					<li> Using Agent2Agent (A2A) Protocol to <b>build and run two agents</b>, one w/ MCP server and one to <i> mimic a human using our agent </i></li>
+					<li> Dedicated <b>Guardrails </b> session, from best-practices to implementation
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- TESTIMONIAL ROW CURRICULUM -->
+		<div class="row justify-content-center mt-6">
+			<!-- WRAPPER COL -->
+			<div class="col-11 col-xxl-9">
+				<div class="row g-5 row-cols-1 row-cols-lg-3">
+					
+													<div class="col">
+								<!-- Flex wrapper for image and details -->
+								<div class="d-flex flex-column flex-md-row align-items-center text-center text-md-start gap-3 mb-3">
+
+									<!-- Profile Image -->
+									<div class="flex-shrink-0">
+										<img loading="lazy" width="120" height="120" src="https://aimakerspace.io/wp-content/uploads/richard-headshot.webp" alt="{field title} Testimonial Review for AI Makerspace{/field}" class="testimonial-image rounded-circle shadow" />
+									</div>
+
+									<!-- Author Details -->
+									<div>
+										<h6 class="rfs-8 fw-semibold mb-1">
+											Richard
+										</h6>
+										<p class="mb-1 text-opacity-75 fst-italic">
+											Machine Learning Engineer
+										</p>
+										<p class="mb-0 fw-semibold text-uppercase letter-spacing-sm">
+											
+										</p>
+									</div>
+
+								</div>
+
+								<!-- Testimonial content -->
+								<div class="card border-0 bg-light-300">
+									<div class="card-body p-4">
+										<p class="rfs-6 fw-normal mb-0">
+											AI Makerspace delivers an outstanding hands-on learning experience for aspiring AI engineers. The program excels in teaching you to build production-ready AI applications while providing crucial insights into the underlying technology. You'll master essential AI engineering skills including RAG implementation, RAGAS evaluation metrics, and fine-tuning techniques to optimize model performance. 
+										</p>
+									</div>
+								</div>
+
+							</div>
+													<div class="col">
+								<!-- Flex wrapper for image and details -->
+								<div class="d-flex flex-column flex-md-row align-items-center text-center text-md-start gap-3 mb-3">
+
+									<!-- Profile Image -->
+									<div class="flex-shrink-0">
+										<img loading="lazy" width="120" height="120" src="https://aimakerspace.io/wp-content/uploads/michelle-boyer.webp" alt="{field title} Testimonial Review for AI Makerspace{/field}" class="testimonial-image rounded-circle shadow" />
+									</div>
+
+									<!-- Author Details -->
+									<div>
+										<h6 class="rfs-8 fw-semibold mb-1">
+											Michelle Boyer
+										</h6>
+										<p class="mb-1 text-opacity-75 fst-italic">
+											IT Development Manager
+										</p>
+										<p class="mb-0 fw-semibold text-uppercase letter-spacing-sm">
+											Road Ranger
+										</p>
+									</div>
+
+								</div>
+
+								<!-- Testimonial content -->
+								<div class="card border-0 bg-light-300">
+									<div class="card-body p-4">
+										<p class="rfs-6 fw-normal mb-0">
+											You guys provide so many resources; I didn't have time to utilize them all.  Pre-learning with what you provide for FREE is fantastic and really required.
+										</p>
+									</div>
+								</div>
+
+							</div>
+													<div class="col">
+								<!-- Flex wrapper for image and details -->
+								<div class="d-flex flex-column flex-md-row align-items-center text-center text-md-start gap-3 mb-3">
+
+									<!-- Profile Image -->
+									<div class="flex-shrink-0">
+										<img loading="lazy" width="120" height="120" src="https://aimakerspace.io/wp-content/uploads/default-headshot-male-blue.webp" alt="{field title} Testimonial Review for AI Makerspace{/field}" class="testimonial-image rounded-circle shadow" />
+									</div>
+
+									<!-- Author Details -->
+									<div>
+										<h6 class="rfs-8 fw-semibold mb-1">
+											Alex
+										</h6>
+										<p class="mb-1 text-opacity-75 fst-italic">
+											Data Scientist
+										</p>
+										<p class="mb-0 fw-semibold text-uppercase letter-spacing-sm">
+											Fonterra
+										</p>
+									</div>
+
+								</div>
+
+								<!-- Testimonial content -->
+								<div class="card border-0 bg-light-300">
+									<div class="card-body p-4">
+										<p class="rfs-6 fw-normal mb-0">
+											Great course, awesome instructors, up-to-date and relevant material. You will get relevant skills to get you started in your AI Engineering career.
+										</p>
+									</div>
+								</div>
+
+							</div>
+						
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- APPLY NOW SECTION CTA -->
+<section class="py-5 bg-hex">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-11 col-md-5 text-start">
+				<h6 class="text-white mb-1">Cohort 08</h6>
+				<p class="text-aqua">Sept 9 - Nov 13, 2025</p>
+				<h6 class="text-white mb-1">Cohort 09</h6>
+				<p class="text-aqua">Jan. 13 - Mar 26, 2025</p>
+				<p class="mb-0 fw-semibold text-white">Live via Zoom every Tuesday & Thursday at 7pm EST</p>
+			</div>
+			<div class="col-11 col-md-4 text-center align-content-center">
+				<div>
+					<h6 class="text-white mb-3">$3,999</h6>
+					<a type="button" class="btn bg-yellow text-uppercase rfs-8 border-0 shadow mb-3 py-3 px-5 track-click" data-track-name="cta_button_to_apply" href="../../../../the-ai-engineering-bootcamp/application/">
+						Apply Now!
+					</a>
+					<p><a class="mb-0 text-white rfs-7 track-click" data-track-name="cta_text_to_teamspage" href="../../../../team-training">Need a package for a team?</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="py-4 py-xl-6 bg-ghost">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-11 col-xl-5 col-xxl-4 align-content-center">
+				<div>
+					<h3 class="text-uppercase fw-bold rfs-20">Learn with a <span class="text-main-blue">Community</span></h3>
+					<p class="rfs-8">People <a href="/category/transformations/" target="_blank" class="fw-semibold track-click" data-track-name="home_s02_text_totw">just like you</a> have transformed their lives by embracing the AI Makerspace ethos, of build , ship 🚢, and share 🚀.
+					</p>
+					<a type="button" class="btn gradient-main-blue-light-blue text-white text-uppercase border-0 shadow mb-4 mt-3 py-3 px-5 track-click" data-track-name="home_s02_button_discord" href="https://bit.ly/4g5Kz4i" target="_blank">Join Our Discord Channel <i class="bi bi-discord ms-2 text-yellow"></i></a>
+				</div>
+			</div>
+			<div class="col-11 col-xl-4 offset-xl-1 mt-4 mt-xl-0 align-content-center">
+				<div class="youtube-lazy ratio ratio-16x9 rounded-3 shadow" data-id="8M5Ju3Ae7aQ"></div>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-6">
+			<!-- WRAPPER COL -->
+			<div class="col-11 col-xxl-9">
+				<div class="row g-5 row-cols-1 row-cols-lg-3">
+					
+													<div class="col">
+								<!-- Flex wrapper for image and details -->
+								<div class="d-flex flex-column flex-md-row align-items-center text-center text-md-start gap-3 mb-3">
+
+									<!-- Profile Image -->
+									<div class="flex-shrink-0">
+										<img loading="lazy" width="120" height="120" src="https://aimakerspace.io/wp-content/uploads/arthi-kasturirangan.webp" alt="{field title} Testimonial Review for AI Makerspace{/field}" class="testimonial-image rounded-circle shadow" />
+									</div>
+
+									<!-- Author Details -->
+									<div>
+										<h6 class="rfs-8 fw-semibold mb-1">
+											Arthi Kasturirangan
+										</h6>
+										<p class="mb-1 text-opacity-75 fst-italic">
+											Senior Principal
+										</p>
+										<p class="mb-0 fw-semibold text-uppercase letter-spacing-sm">
+											Informa
+										</p>
+									</div>
+
+								</div>
+
+								<!-- Testimonial content -->
+								<div class="card border-0">
+									<div class="card-body p-4 pb-0">
+										<p class="rfs-6 fw-normal">
+											AI Makerspace is where theory meets traction. It’s one thing to learn GenAI—another to actually build, ship, and share real solutions that create business impact. This program helped me do exactly that. If you want to lead real-world GenAI deployments—not just talk about it—this is the program to beat.
+										</p>
+									</div>
+								</div>
+
+							</div>
+													<div class="col">
+								<!-- Flex wrapper for image and details -->
+								<div class="d-flex flex-column flex-md-row align-items-center text-center text-md-start gap-3 mb-3">
+
+									<!-- Profile Image -->
+									<div class="flex-shrink-0">
+										<img loading="lazy" width="120" height="120" src="https://aimakerspace.io/wp-content/uploads/savrin-darash-headshot.webp" alt="{field title} Testimonial Review for AI Makerspace{/field}" class="testimonial-image rounded-circle shadow" />
+									</div>
+
+									<!-- Author Details -->
+									<div>
+										<h6 class="rfs-8 fw-semibold mb-1">
+											Savrin Darash
+										</h6>
+										<p class="mb-1 text-opacity-75 fst-italic">
+											Data Scientist
+										</p>
+										<p class="mb-0 fw-semibold text-uppercase letter-spacing-sm">
+											CVS Health
+										</p>
+									</div>
+
+								</div>
+
+								<!-- Testimonial content -->
+								<div class="card border-0">
+									<div class="card-body p-4 pb-0">
+										<p class="rfs-6 fw-normal">
+											I'm amazed by the community, the product, and the value delivered to students. Most educational courses only give you knowledge but don't push you to build. AIM has perfected learning through building. I truly enjoyed every moment of this course.
+										</p>
+									</div>
+								</div>
+
+							</div>
+													<div class="col">
+								<!-- Flex wrapper for image and details -->
+								<div class="d-flex flex-column flex-md-row align-items-center text-center text-md-start gap-3 mb-3">
+
+									<!-- Profile Image -->
+									<div class="flex-shrink-0">
+										<img loading="lazy" width="120" height="120" src="https://aimakerspace.io/wp-content/uploads/tsvetan-konov.webp" alt="{field title} Testimonial Review for AI Makerspace{/field}" class="testimonial-image rounded-circle shadow" />
+									</div>
+
+									<!-- Author Details -->
+									<div>
+										<h6 class="rfs-8 fw-semibold mb-1">
+											Tsvetan Konov
+										</h6>
+										<p class="mb-1 text-opacity-75 fst-italic">
+											Consultant
+										</p>
+										<p class="mb-0 fw-semibold text-uppercase letter-spacing-sm">
+											
+										</p>
+									</div>
+
+								</div>
+
+								<!-- Testimonial content -->
+								<div class="card border-0">
+									<div class="card-body p-4 pb-0">
+										<p class="rfs-6 fw-normal">
+											The community aspect of build ship share is great. [The AIE Bootcamp] really worth it just for that. Learning how to build is important in this day of age and it really helps doing it in a group setting. 
+										</p>
+									</div>
+								</div>
+
+							</div>
+						
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="testimonials" class="py-4 py-xl-6" data-bs-spy="scroll" data-bs-target="#floatingNavbar" data-bs-offset="0" tabindex="0">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-11 col-xl-5 col-xxl-4 align-content-center">
+				<h2 class="text-uppercase fw-bold rfs-20"><span class="text-main-blue">Real</span> Testimonials</h2>
+				<p class="rfs-8">At the end of every session in we always ask our students one simple question:</p>
+				<p class="rfs-8 text-main-blue fst-italic">"Is there anything else you'd like to share with us?"</p>
+				<p class="rfs-8">Check out these direct quotes from the last two cohorts!</p>
+			</div>
+			<div class="col-11 col-xl-4 offset-xl-1 mt-4 mt-xl-0 align-content-center">
+				<div class="card big-shadow border-0">
+					<div class="card-body">
+						<a href="../../../category/transformations/" target="_blank" class="track-click" data-track-name="bootcamp_s08_image_totw"><img src="../../../../../wp-content/uploads/community-hero-image.webp" class="img-fluid rounded" height="540px" width="100%"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="pb-5 pb-xl-7 pt-4">
+	<div class="container-fluid">
+
+		<div class="row justify-content-center">
+
+			<!-- other head elements -->
+			<style>
+    .quote-list {
+      font-size: 0.95rem;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      padding-left: 1.2rem;
+    }
+    .quote-list li {
+      margin-bottom: 0.3rem !important;
+    }
+  </style>
+
+			<div class="col-9">
+				<p class="fw-semibold mt-3 mb-1 rfs-8 text-deep-blue">Post-Session Feedback, Cohort 5:</p>
+				<ol class="quote-list">
+					<li>“One of the best lessons I’ve ever had. The instructor’s level of expertise is high and his communication is extremely easy to understand. I have grasped all the concepts.”</li>
+					<li>“This session was pure gold, seeing actual applications, really nice!”</li>
+					<li>“I am having lots of fun and learning. LOVE THE ENERGY! Let’s go.”</li>
+					<li>“The breakout rooms are absolutely fantastic. Peer Supporters are bae.”</li>
+					<li>“The breakout rooms are just so good – easily sets it apart from 90% of other courses out there.”</li>
+					<li>“It was a great session today. Super helpful and getting clearer. Amazing job everyone. Love this!!!!”</li>
+					<li>“I have deployed and built a number of applications right from the first sessions of the course. Knowledge also helps me in self-study and research.”</li>
+					<li>“This class was worth every dollar, thank you guys!”</li>
+					<li>“Thank you for an amazing ride!”</li>
+					<li>“I complained last time about the breakout rooms not being long enough and the lectures being too long. This time I think the ratio was GLORIOUS PERFECTION!”</li>
+				</ol>
+				<p class="fw-semibold mt-3 mb-1 rfs-8 text-deep-blue">Post-Session Feedback, Cohort 6:</p>
+				<ol class="quote-list">
+					<li>“I am grateful to be part of this cohort… Huge thanks to all of you!!!”</li>
+					<li>“I will be taking a lot of classes async… The recordings are posted so promptly and the Discord conversations stay active — exactly what you’d expect from a high-quality course!”</li>
+					<li>“I feel we’re the luckiest group to have Don and Laura in the same cohort — different styles, complementary strengths, and both incredibly patient.”</li>
+					<li>Peer groups are awesome for discussion — the chats were fire.”</li>
+					<li>“Program is great. It moves fast, but I’d feel ripped off if I were too comfortable!”</li>
+					<li>“Great class, like always — really enjoying the cohort so far.”</li>
+					<li>“Shout out to everyone in AIM, including the peer supporters. What a great (but challenging) experience!”</li>
+					<li>“The sessions are going great. I’m learning a lot, and the peer supporters (Andre &amp; Nithin) are so knowledgeable.”</li>
+					<li>“Mike is doing an excellent job — we’re really grokking the content in the breakouts!”</li>
+					<li>“Andre is amazing — super knowledgeable and incredibly patient in explaining everything to us.”</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container pt-6 pb-0">
+		<div class="row">
+			<div class="col-12">
+				<div class="testimonial-masonry">
+					
+						<!-- Initial 9 testimonials -->
+													<div class="testimonial-item">
+								<div class="card border-0 shadow">
+									<div class="card-body py-4">
+										<div class="d-flex">
+											<img loading="lazy" src="https://aimakerspace.io/wp-content/uploads/savrin-darash-headshot.webp" class="rounded" style="width:64px;height:64px" />
+											<div class="ps-2">
+												<h4 class="mb-1 rfs-8">
+													Savrin Darash
+												</h4>
+												<p class="lh-sm rfs-6 mb-0"><span class="fst-italic">
+														Data Scientist
+													</span><br />
+													<semi>
+														CVS Health
+													</semi>
+												</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<span class="rfs-6 text-matte">
+												I'm amazed by the community, the product, and the value delivered to students. Most educational courses only give you knowledge but don't push you to build. AIM has perfected learning through building. I truly enjoyed every moment of this course.
+											</span>
+										</div>
+										<div class="rating mt-3">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="testimonial-item">
+								<div class="card border-0 shadow">
+									<div class="card-body py-4">
+										<div class="d-flex">
+											<img loading="lazy" src="https://aimakerspace.io/wp-content/uploads/geeta-chaudrey.webp" class="rounded" style="width:64px;height:64px" />
+											<div class="ps-2">
+												<h4 class="mb-1 rfs-8">
+													Geeta Chaudhry
+												</h4>
+												<p class="lh-sm rfs-6 mb-0"><span class="fst-italic">
+														Engineering Mindset Coach
+													</span><br />
+													<semi>
+														
+													</semi>
+												</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<span class="rfs-6 text-matte">
+												This is THE AI Engineering course to take. The team genuinely cares about your learning and they support you every step of the way. They know their stuff, and stay updated with everything that's going on. Couldn't have asked for better value for my money. Amazing!
+											</span>
+										</div>
+										<div class="rating mt-3">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="testimonial-item">
+								<div class="card border-0 shadow">
+									<div class="card-body py-4">
+										<div class="d-flex">
+											<img loading="lazy" src="https://aimakerspace.io/wp-content/uploads/angela-chapman-headshot.webp" class="rounded" style="width:64px;height:64px" />
+											<div class="ps-2">
+												<h4 class="mb-1 rfs-8">
+													Angela Chapman
+												</h4>
+												<p class="lh-sm rfs-6 mb-0"><span class="fst-italic">
+														AI Consultant
+													</span><br />
+													<semi>
+														Blue Grotto Labs, LLC
+													</semi>
+												</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<span class="rfs-6 text-matte">
+												This is a great course! Whether you are new to LLMs, or already using them but wanting to learn more of the latest open source tools, this course is well worth your time.
+											</span>
+										</div>
+										<div class="rating mt-3">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="testimonial-item">
+								<div class="card border-0 shadow">
+									<div class="card-body py-4">
+										<div class="d-flex">
+											<img loading="lazy" src="https://aimakerspace.io/wp-content/uploads/julien-thomazo.webp" class="rounded" style="width:64px;height:64px" />
+											<div class="ps-2">
+												<h4 class="mb-1 rfs-8">
+													Julien Thomazo
+												</h4>
+												<p class="lh-sm rfs-6 mb-0"><span class="fst-italic">
+														
+													</span><br />
+													<semi>
+														
+													</semi>
+												</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<span class="rfs-6 text-matte">
+												The AI Engineering bootcamp was extremely rich and of very high quality. In just a few weeks, I learned very practical skills on everything related to implementation, the RAG-based project, AI agents, and, of course, the implementation of performance metrics. 'Build, Ship, and Share' is a very effective philosophy for learning to master the subtleties inherent in implementing an AI project in 'real life'. Thanks to the Bootcamp, I am now able to take any idea and transform it into an AI-based prototype that is functional and efficient. So I highly recommend it!
+											</span>
+										</div>
+										<div class="rating mt-3">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="testimonial-item">
+								<div class="card border-0 shadow">
+									<div class="card-body py-4">
+										<div class="d-flex">
+											<img loading="lazy" src="https://aimakerspace.io/wp-content/uploads/arthi-kasturirangan.webp" class="rounded" style="width:64px;height:64px" />
+											<div class="ps-2">
+												<h4 class="mb-1 rfs-8">
+													Arthi Kasturirangan
+												</h4>
+												<p class="lh-sm rfs-6 mb-0"><span class="fst-italic">
+														Senior Principal
+													</span><br />
+													<semi>
+														Informa
+													</semi>
+												</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<span class="rfs-6 text-matte">
+												AI Makerspace is where theory meets traction. It’s one thing to learn GenAI—another to actually build, ship, and share real solutions that create business impact. This program helped me do exactly that. If you want to lead real-world GenAI deployments—not just talk about it—this is the program to beat.
+											</span>
+										</div>
+										<div class="rating mt-3">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="testimonial-item">
+								<div class="card border-0 shadow">
+									<div class="card-body py-4">
+										<div class="d-flex">
+											<img loading="lazy" src="https://aimakerspace.io/wp-content/uploads/jonathan-hodges-headshot-1.webp" class="rounded" style="width:64px;height:64px" />
+											<div class="ps-2">
+												<h4 class="mb-1 rfs-8">
+													Jonathan Hodges
+												</h4>
+												<p class="lh-sm rfs-6 mb-0"><span class="fst-italic">
+														Head of AI & Machine Learning
+													</span><br />
+													<semi>
+														Userpilot
+													</semi>
+												</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<span class="rfs-6 text-matte">
+												AI Makerspace is the best game in town for AI Engineering Leaders looking to put some rigor behind their operations and organizational design decisions. AI's a team sport and to flourish and win requires getting everyone to row in the same direction. This knowledge facilitates building optimal teams and processes that can ensure predictable and successful AI roadmaps and associated growth for your companies.
+											</span>
+										</div>
+										<div class="rating mt-3">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="testimonial-item">
+								<div class="card border-0 shadow">
+									<div class="card-body py-4">
+										<div class="d-flex">
+											<img loading="lazy" src="https://aimakerspace.io/wp-content/uploads/dr-steven-gawthorpe-headshot-1.webp" class="rounded" style="width:64px;height:64px" />
+											<div class="ps-2">
+												<h4 class="mb-1 rfs-8">
+													Steven Gawthorpe
+												</h4>
+												<p class="lh-sm rfs-6 mb-0"><span class="fst-italic">
+														Associate Director
+													</span><br />
+													<semi>
+														Berkeley Research Group LLC.
+													</semi>
+												</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<span class="rfs-6 text-matte">
+												AI Makerspace excels where others have come up short, empowering data scientists with the vital practical skills to flourish within the AI landscape. Through collaborations with industry trailblazers, they guarantee a concentration on the most pertinent and crucial expertise. They bring people up to speed on a subject that never slows down.
+											</span>
+										</div>
+										<div class="rating mt-3">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="testimonial-item">
+								<div class="card border-0 shadow">
+									<div class="card-body py-4">
+										<div class="d-flex">
+											<img loading="lazy" src="https://aimakerspace.io/wp-content/uploads/todd-deshane-headshot-1.webp" class="rounded" style="width:64px;height:64px" />
+											<div class="ps-2">
+												<h4 class="mb-1 rfs-8">
+													Todd Deshane
+												</h4>
+												<p class="lh-sm rfs-6 mb-0"><span class="fst-italic">
+														CEO
+													</span><br />
+													<semi>
+														Intersecto, LLC.
+													</semi>
+												</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<span class="rfs-6 text-matte">
+												What a community that is being built from the ground up, on the cutting-edge, with enthusiasm. They have attracted a special group of practitioners and are selective in the process. At the intersection of data science, machine learning engineering, and MLOps comes the current future of LLMOps and building what’s next in this space.
+											</span>
+										</div>
+										<div class="rating mt-3">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="testimonial-item">
+								<div class="card border-0 shadow">
+									<div class="card-body py-4">
+										<div class="d-flex">
+											<img loading="lazy" src="https://aimakerspace.io/wp-content/uploads/eric-riddoch.webp" class="rounded" style="width:64px;height:64px" />
+											<div class="ps-2">
+												<h4 class="mb-1 rfs-8">
+													Eric Riddoch
+												</h4>
+												<p class="lh-sm rfs-6 mb-0"><span class="fst-italic">
+														Director of ML Platform
+													</span><br />
+													<semi>
+														Pattern
+													</semi>
+												</p>
+											</div>
+										</div>
+										<div class="mt-3">
+											<span class="rfs-6 text-matte">
+												What you guys have built is insane! On a totally different plane than [other courses]. So many cool, high-energy people in one place. Plus, you guys have made it feel like a dev bootcamp some people pay $8k to $16k for!
+											</span>
+										</div>
+										<div class="rating mt-3">
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+											<svg width="1em" height="1em" viewBox="0 0 16 16" fill="#e8c073" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+					
+				</div>
+			</div>
+		</div>
+		<div class="mt-5">
+			<a class="btn text-white bg-hex bg-main-blue" href="https://aimakerspace.io/category/testimonials/" target="_blank">Read More Testimonials</a>
+		</div>
+	</div>
+
+</section>
+
+<section id="navTrigger" class="py-4 py-xl-6 bg-light-300" data-bs-spy="scroll" data-bs-target="#floatingNavbar" data-bs-offset="0" tabindex="0">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-11 col-xl-5 col-xxl-4 align-content-kle d-flex justify-content-center">
+				<h2 class="text-uppercase fw-bold rfs-20 text-center m-0" style="white-space: nowrap;">
+					Should <span class="text-main-blue">you</span> take this course?
+				</h2>
+			</div>
+
+		</div>
+		<div class="row justify-content-center mt-5">
+			<div class="col-11 col-xl-4 align-content-center">
+				<div class="card shadow border-0">
+					<div class="card-body">
+						<p class="">
+							<span style="background-color:#28a745; color:white;" class="px-3 py-2 rfs-20 fw-bold rounded-3">YES</span>
+						</p>
+						<p class="rfs-8 ms-2">
+							<i class="bi bi-check-circle-fill me-2" style="color:#28a745;"></i>
+							Engineers, developers, and data scientists who <span class="fw-semibold text-decoration-underline">code every day</span>
+						</p>
+						<p class="rfs-8 ms-2">
+							<i class="bi bi-check-circle-fill me-2" style="color:#28a745;"></i>
+							Aspiring builders of any kind who <span class="fw-semibold text-decoration-underline">want to do AI-assisted coding every day</span>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-11 col-xl-4 offset-xl-1 align-content-center">
+				<div class="card border">
+					<div class="card-body">
+						<p class=""><span class="px-3 py-2 rfs-20 fw-bold text-white bg-red rounded-3">NO</span></p>
+						<p class="rfs-8 ms-2"><i class="bi bi-x-circle-fill me-2 text-red"></i> Product Managers or executives who <span class="fw-semibold text-decoration-underline">do not want to code every day</span> </p>
+						<p class="rfs-8 ms-2"><i class="bi bi-x-circle-fill me-2 text-red"></i> Anyone who prefers theory and <span class="fw-semibold text-decoration-underline"> can't build until they "understand" everything</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-5">
+			<div class="col-11 col-xl-8 mx-auto text-center">
+				<p class="rfs-10 text-deep-blue">
+					This bootcamp is for people who want to go <span class="fw-semibold text-main-blue">beyond concepts</span> and
+					<b>build</b>, <b>evaluate</b>, <b>deploy</b>, <b>operate</b>, and <b>improve</b> LLM, RAG, Agent, and multi-agent applications in production environments.
+				</p>
+				<a type="button" class="btn btn-primary text-uppercase border-0 shadow mb-4 mt-3 py-3 px-5 track-click" data-track-name="bootcamp_s03_btn_fullfaq" href="#faq">
+					Commonly asked questions
+					<i class="bi bi-question-square-fill ms-2 text-yellow"></i>
+				</a>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<!-- WHY BOOCAMP WHITE -->
+<section id="whyBootcamp" class="py-4 py-xl-6">
+	<!-- LOCK IN -->
+	<div class="container-fluid mb-6">
+		<div class="row justify-content-center mb-5">
+			<div class="col-11 col-xl-8">
+				<h3 class="text-uppercase fw-bold rfs-20">Why choose The <span class="text-main-blue">AI Engineer</span> Bootcamp</h3>
+				<p class="rfs-8">We combine cutting-edge curriculum, expert instructors, dedicated peer supporters, and a supportive community to deliver an unmatched learning experience.</p>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-4"><!-- WRAPPER ROW for alignment -->
+			<div class="col-11 col-xl-9">
+				<div class="row row-cols-1 row-cols-md-2 row-cols-xl-4">
+					<div class="col mb-4">
+						<div class="text-center shadow bg-white rounded-3 p-4 w-100 h-100">
+							<h6 class="rfs-8 mb-0">Build, Build, Build!</h6>
+							<i class="bi bi-boxes rfs-32 text-main-blue"></i>
+							<p class="mb-0">17+ builds per cohort!</p>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="text-center shadow bg-white rounded-3 p-4 w-100 h-100">
+							<h6 class="rfs-8 mb-0">Live Demo Day</h6>
+							<i class="bi bi-person-bounding-box rfs-32 text-main-blue"></i>
+							<p class="mb-0">Present to a live audience!</p>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="text-center shadow bg-white rounded-3 p-4 w-100 h-100">
+							<h6 class="rfs-8 mb-0">Dedicated Peer Support</h6>
+							<i class="bi bi-chat-left-dots rfs-32 text-main-blue"></i>
+							<p class="mb-0">8:1 Student-to-Peer Ratio</p>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="text-center shadow bg-white rounded-3 p-4 w-100 h-100">
+							<h6 class="rfs-8 mb-0">Accountability</h6>
+							<i class="bi bi-alarm rfs-32 text-main-blue"></i>
+							<p class="mb-0">Get expert feedback on all your work! </p>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="text-center shadow bg-white rounded-3 p-4 w-100 h-100">
+							<h6 class="rfs-8 mb-0">Certification</h6>
+							<i class="bi bi-award rfs-32 text-main-blue"></i>
+							<p class="mb-0">Become a Certified AI Engineer</p>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="text-center shadow bg-white rounded-3 p-4 w-100 h-100">
+							<h6 class="rfs-8 mb-0">Expert Instructors</h6>
+							<i class="bi bi-mortarboard rfs-32 text-main-blue"></i>
+							<p class="mb-0">Real AI Engineering Practitioners</p>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="text-center shadow bg-white rounded-3 p-4 w-100 h-100">
+							<h6 class="rfs-8 mb-0">Global Community</h6>
+							<i class="bi bi-globe-americas rfs-32 text-main-blue"></i>
+							<p class="mb-0">Work with people around the world</p>
+						</div>
+					</div>
+					<div class="col mb-4">
+						<div class="text-center shadow bg-white rounded-3 p-4 w-100 h-100">
+							<h6 class="rfs-8 mb-0">Enterprise Edge</h6>
+							<i class="bi bi-briefcase rfs-32 text-main-blue"></i>
+							<p class="mb-0">Build On-Prem and in the cloud</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+		<script defer="" src="https://unpkg.com/vanilla-counter" onload="initializeCounterMefa()"></script>
+	<script>
+function initializeCounterMefa(){
+	 
+	const options = {};
+	
+	const observer = new IntersectionObserver(function
+	(entries, observer){
+	    entries.forEach(entry => {
+	        console.log(entry);
+	         VanillaCounter();
+	    });
+	}, options);
+	
+	observer.observe(document.querySelector('.counter-mefa'));
+	 
+}
+</script>
+
+	<div class="container">
+		<div class="row rounded-3 text-center py-4 counter-mefa bg-white">
+			<div class="col-12 col-md-4">
+				<span class="fw-bold display-5 mb-5 text-main-blue" data-vanilla-counter="" data-start-at="0" data-end-at="282" data-time="1000" data-delay="60" data-format="{}"></span>
+				<p class="rfs-9 mb-0 text-deep-blue"><b>Enrollments</b>, Cohorts 1-6</p>
+			</div>
+			<div class="col-12 col-md-4">
+				<span class="fw-bold display-5 mb-5 text-main-blue" data-vanilla-counter="" data-start-at="0" data-end-at="137" data-time="1000" data-delay="60" data-format="{}"></span>
+				<p class="rfs-9 mb-0 text-deep-blue"><b>Certified</b> Graduates</p>
+			</div>
+			<div class="col-12 col-md-4">
+				<span class="fw-bold display-5 mb-5 text-main-blue" data-vanilla-counter="" data-start-at="2000" data-end-at="2890" data-time="1000" data-delay="60" data-format="{}"></span><span class="fw-bold display-5 mb-5 text-main-blue">+</span>
+				<p class="rfs-9 mb-0 text-deep-blue"><b>Discord</b> Members</p>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+
+<!-- APPLY NOW SECTION CTA -->
+<section class="py-5 bg-hex">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-11 col-md-5 text-start">
+				<h6 class="text-white mb-1">Cohort 08</h6>
+				<p class="text-aqua">Sept 9 - Nov 13, 2025</p>
+				<h6 class="text-white mb-1">Cohort 09</h6>
+				<p class="text-aqua">Jan. 13 - Mar 26, 2025</p>
+				<p class="mb-0 fw-semibold text-white">Live via Zoom every Tuesday & Thursday at 7pm EST</p>
+			</div>
+			<div class="col-11 col-md-4 text-center align-content-center">
+				<div>
+					<h6 class="text-white mb-3">$3,999</h6>
+					<a type="button" class="btn bg-yellow text-uppercase rfs-8 border-0 shadow mb-3 py-3 px-5 track-click" data-track-name="cta_button_to_apply" href="../../../../the-ai-engineering-bootcamp/application/">
+						Apply Now!
+					</a>
+					<p><a class="mb-0 text-white rfs-7 track-click" data-track-name="cta_text_to_teamspage" href="../../../../team-training">Need a package for a team?</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="py-4 py-xl-6">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-11 col-xl-5 col-xxl-4 align-content-center">
+				<h2 class="text-uppercase fw-bold rfs-20 mw-lg-7">The Most <span class="text-main-blue">Competitive</span> Bootcamp Around</h2>
+				<p class="rfs-8">This course is challenging to get into because AI Engineer roles are challenging to succeed in. Unlike other training programs, <span class="fw-semibold text-main-blue">you must</span> demonstrate your willingness to build, ship, and share on a deadline before you enroll.</p>
+				<p class="rfs-8 mb-0">Return on Investment for AI training is not easy - for individuals or companies - but it <span class="fw-semibold text-main-blue">is</span> possible. It just requires the right curriculum, community, and a shared vision of the future.</p>
+			</div>
+			<div class="col-11 col-xl-4 offset-xl-1 mt-4 mt-xl-0 align-content-center">
+				<div class="card big-shadow border-0 rounded-4 mb-2">
+					<div class="card-body">
+						<div class="youtube-lazy ratio ratio-16x9 rounded-3 shadow" data-id="m3bz5E4xe70"></div>
+					</div>
+				</div>
+				<p class="rfs-6 fst-italic text-muted text-center">Yes, we even teach you how to "share" what you build!</p>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-1 g-6 align-items-stretch">
+			<div class="col-11 col-lg-3 d-flex">
+				<div class="card border bg-white flex-fill">
+					<div class="card-body text-center">
+						<i class="bi bi-list-check rfs-20 text-main-blue"></i>
+						<p class="rfs-9 fw-semibold text-main-blue text-uppercase mb-1">Acceptance Rate</p>
+						<h4>22%</h4>
+						<p class="mt-2 small mb-0">For people who are <span class="fw-semibold">laser focused</span> on learning. <br><a class="track-click text-main-blue fst-italic" data-track-name="bootcamp_text_modal-linkedin-acceptance-post" data-bs-toggle="modal" data-bs-target="#acceptanceRate">Why this matters!</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-11 col-lg-3 d-flex">
+				<div class="card border-0 bg-white shadow flex-fill">
+					<div class="card-body text-center">
+						<i class="bi bi-award rfs-20 text-main-blue"></i>
+						<p class="rfs-9 fw-semibold text-main-blue text-uppercase mb-1">Certification Rate<sup class="text-muted">*</sup></p>
+						<h4>78%</h4>
+						<p class="mt-2 small mb-0">Quality input means <span class="fw-semibold">quality</span> output</p>
+						<p class="mb-0 mt-2 text-center text-muted rfs-6 fst-italic">*Estimate for Cohort 7</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-11 col-lg-3 d-flex">
+				<div class="card border bg-white flex-fill">
+					<div class="card-body text-center">
+						<i class="bi bi-file-easel rfs-20 text-main-blue"></i>
+						<p class="rfs-9 fw-semibold text-main-blue text-uppercase mb-1">Demo Day Pitch</p>
+						<h4>22%</h4>
+						<p class="mt-2 small mb-0">Students who <span class="fw-semibold">qualify</span> to present on Demo Day<br><a class="track-click text-main-blue fst-italic" data-track-name="bootcamp_text_demo-day-process" href="https://absorbing-toaster-713.notion.site/Demo-Day-Selection-Process-254cd547af3d80258d06d48693bd5ec3">Qualification criteria</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-6 justify-content-center">
+			<div class="col-11 col-xl-9">
+				<p class="rfs-8 text-center"><a href="/application" class="track-click fw-semibold" data-track-name="bootcamp_s1_apply">Join the next cohort</a> of our flagship bootcamp, or let us help you <a href="../../../../../team-training/" class="track-click fw-semibold" data-track-name="bootcamp_s1_teams">build your very own.</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="py-5 bg-hex">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-11 col-md-5 text-start">
+				<h6 class="text-white mb-1">Cohort 08</h6>
+				<p class="text-aqua">Sept 9 - Nov 13, 2025</p>
+				<h6 class="text-white mb-1">Cohort 09</h6>
+				<p class="text-aqua">Jan. 13 - Mar 26, 2025</p>
+				<p class="mb-0 fw-semibold text-white">Live via Zoom every Tuesday & Thursday at 7pm EST</p>
+			</div>
+			<div class="col-11 col-md-4 text-center align-content-center">
+				<div>
+					<h6 class="text-white mb-3">$3,999</h6>
+					<a type="button" class="btn bg-yellow text-uppercase rfs-8 border-0 shadow mb-3 py-3 px-5 track-click" data-track-name="cta_button_to_apply" href="../../../../the-ai-engineering-bootcamp/application/">
+						Apply Now!
+					</a>
+					<p><a class="mb-0 text-white rfs-7 track-click" data-track-name="cta_text_to_teamspage" href="../../../../team-training">Need a package for a team?</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="packages" class="py-4 py-xl-6">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-11 col-xl-9">
+				<h3 class="text-uppercase fw-bold rfs-22">Build with <span class="text-main-blue">Competence</span></h3>
+				<div class="mw-9">
+					<p class="rfs-8">Are you looking to <b>speed-run another online course certificate</b> or <b>check a box</b> for your company?</p>
+					<p class="rfs-8"><i>Sorry, we can't help you.</i> Good luck <a href="https://youtu.be/JeNS1ZNHQs8?si=K3kTEitgLFEBLyD7" target="_blank" rel="noopener noreferrer">vibe coding</a>. But if you truly want to <span class="fw-semibold text-main-blue">transform</span> yourself, your team, or your company, then welcome to AI Makerspace</p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="row justify-content-center mt-5"><!-- WRAPPER ROW for alignment -->
+		<div class="col-11 col-xl-9">
+			<div class="row">
+				<!-- Individual Plan -->
+				<div class="col-11 col-md-4 mt-4 mt-xxl-0">
+					<div class="h-100 border rounded-3 p-4">
+						<h4 class="fw-bold text-deep-blue">Individuals</h4>
+						<p class="rfs-10 fw-semibold text-main-blue">$3.5k</p>
+						<ul class="list-unstyled mb-5">
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>20 live sessions</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Peer Support groups</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Build 15+ apps</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Demo Day!</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Certified graduates</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Global Discord community</span>
+							</li>
+						</ul>
+						<a class="btn btn-outline-primary w-100 rounded-pill pe-auto track-click" data-track-name="bootcamp_pricing_btn_apply" href="/apply">Get On The Path Now</a>
+					</div>
+				</div>
+				<!-- Teams -->
+				<div class="col-11 col-md-4 mt-4 mt-xxl-0">
+					<div class="h-100 shadow rounded-3 p-4">
+						<h4 class="fw-bold text-deep-blue">Teams</h4>
+						<p class="rfs-10 fw-semibold text-main-blue">volume discount</p>
+						<ul class="list-unstyled mb-5">
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>20 live sessions</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Dedicated Peer Supporter</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Build 15+ apps</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Private Demo Day*</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Certified graduates</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Post-cohort consulting packages*</span>
+							</li>
+						</ul>
+						<a class="btn btn-primary w-100 rounded-pill pe-auto track-click" data-track-name="bootcamp_pricing_btn_teampage" href="../../../team-training/">Transform Your Team</a>
+					</div>
+				</div>
+				<!-- Enterprise Plan -->
+				<div class="col-11 col-md-4 mt-4 mt-xxl-0">
+					<div class="h-100 rounded-3 border p-4">
+						<h4 class="fw-bold text-deep-blue">Enterprise</h4>
+						<p class="rfs-10 fw-semibold text-main-blue">starting at $50k</p>
+						<ul class="list-unstyled mb-5">
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Teams of 20 or more</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Focused on enterprise-edge</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Condensed to 4 weeks</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Built around your tech stack</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Take real apps from POC to prod.</span>
+							</li>
+							<li class="mb-3 d-flex align-items-center">
+								<i class="bi bi-check-circle-fill text-success me-2"></i>
+								<span>Ongoing support programs</span>
+							</li>
+						</ul>
+						<a class="btn btn-outline-primary w-100 rounded-pill pe-auto track-click" data-track-name="bootcamp_pricing_btn_enterprise" href="" data-bs-toggle="modal" data-bs-target="#enterpriseCall">Schedule A Demo</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row justify-content-center mt-3">
+		<div class="col-11 text-center">
+			<p class="rfs-6 text-gray-600 fst-italic">* Additional fees apply</p>
+		</div>
+	</div>
+
+</section>
+
+<!-- APPLY NOW SECTION CTA -->
+<section class="py-5 bg-hex">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-11 col-md-5 text-start">
+				<h6 class="text-white mb-1">Cohort 08</h6>
+				<p class="text-aqua">Sept 9 - Nov 13, 2025</p>
+				<h6 class="text-white mb-1">Cohort 09</h6>
+				<p class="text-aqua">Jan. 13 - Mar 26, 2025</p>
+				<p class="mb-0 fw-semibold text-white">Live via Zoom every Tuesday & Thursday at 7pm EST</p>
+			</div>
+			<div class="col-11 col-md-4 text-center align-content-center">
+				<div>
+					<h6 class="text-white mb-3">$3,999</h6>
+					<a type="button" class="btn bg-yellow text-uppercase rfs-8 border-0 shadow mb-3 py-3 px-5 track-click" data-track-name="cta_button_to_apply" href="../../../../the-ai-engineering-bootcamp/application/">
+						Apply Now!
+					</a>
+					<p><a class="mb-0 text-white rfs-7 track-click" data-track-name="cta_text_to_teamspage" href="../../../../team-training">Need a package for a team?</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- INSTRUCTORS -->
+<section id="faq" class="py-4 py-xl-6" data-bs-spy="scroll" data-bs-target="#floatingNavbar" data-bs-offset="0" tabindex="0">
+	<div class="container-fluid">
+		<div class="row justify-content-center">
+			<div class="col-11 col-xl-8 text-center">
+				<h3 class="text-uppercase fw-bold rfs-20">
+					Frequently Asked <span class="text-main-blue">Questions</span>
+				</h3>
+			</div>
+		</div>
+		<div class="row justify-content-center mt-6"><!-- WRAPPER ROW for alignment -->
+			<div class="col-11 col-xl-9">
+				<div class="faq-masonry-columns" style="column-gap: 2.5rem;">
+					<div class="card mb-4 shadow border-0" style="break-inside: avoid;">
+						<div class="card-body">
+							<h6 class="rfs-9">Are the classes taught live?</h6>
+							<p class="mb-0">Yes! Dr. Greg and The Wiz, along with a large team of 10+ peer supporters and course operations staff, run each and every class LIVE.</p>
+						</div>
+					</div>
+					<div class="card mb-4 shadow border-0" style="break-inside: avoid;">
+						<div class="card-body">
+							<h6 class="rfs-9">Are all live sessions recorded?</h6>
+							<p class="mb-0">Yes! You can easily catch up asynchronously on the course if you need to miss a class or two, or if you're in a timezone that makes attending class live very difficult.</p>
+						</div>
+					</div>
+					<div class="card mb-4 shadow border-0" style="break-inside: avoid;">
+						<div class="card-body">
+							<h6 class="rfs-9">I work full-time, what is the expected time commitment?</h6>
+							<p class="mb-0">This course is designed for people with full-time jobs, but it is a tough bootcamp. We recommend that if you do not have at least 10 hours per week on average to dedicate to the course, then you should wait until a cohort that you can commit to!</p>
+						</div>
+					</div>
+					<div class="card mb-4 shadow border-0" style="break-inside: avoid;">
+						<div class="card-body">
+							<h6 class="rfs-9">What additional costs should I budget for?</h6>
+							<p>You will need to set up billing for the following tools:</p>
+							<ul>
+								<li>OpenAI API access </li>
+								<li>Anthropic Claude API access</li>
+								<li>TogetherAI (for building with open-source models)</li>
+							</ul>
+							<p class="mb-0">Recommended budget ~= $100 total</p>
+						</div>
+					</div>
+					<div class="card mb-4 shadow border-0">
+						<div class="card-body">
+							<h6 class="rfs-9">I am a not a hands-on coder, but <span class="fw-semibold">I lead one or more teams</span> building production LLM applications.</h6>
+							<p>If you do not want to do <span class="fw-semibold">engineering-level coding</span>, you should <b>not</b> take this course. You may benefit from watching the conceptual and discussion portions of our YouTube videos as outlined in our free <a href="https://roadmap.sh/r/the-ai-engineering-bootcamp" target="_blank" class="track-click">2025 AI Engineering Roadmap</a>.</p>
+							<p class="mb-0">However, if you lead engineers, the Bootcamp may be the perfect solution for your team. Check out the <a class="track-click" data-track-name="bootcamp_faq01_text_teamspage" href="../../../../team-training" target="_blank">Teams Page</a> for more information.</p>
+						</div>
+					</div>
+					<div class="card mb-4 shadow border-0">
+						<div class="card-body">
+							<h6 class="rfs-9">Do you offer any discounts for buying multiple seats?</h6>
+							<p><span class="fw-semibold">YES!</span> Please visit our <a class="track-click" data-track-name="bootcamp_faq02_text_teamspage" href="../../../../team-training" target="_blank">Teams Page</a> for more information.</p>
+						</div>
+					</div>
+					<div class="card mb-4 shadow border-0">
+						<div class="card-body">
+							<h6 class="rfs-9">Do you offer local pricing based on country?</h6>
+							<p>We understand that it is difficult for folks around the world to afford our bootcamp, and while we look forward to serving local markets with local offerings led by local instructors in the future, this is not something that we are able to support as a small, bootstrapped startup today!</p>
+						</div>
+					</div>
+					<div class="card mb-4 shadow border-0">
+						<div class="card-body">
+							<h6 class="rfs-9">What is the policy for deferrals?</h6>
+							<p class="mb-0">Please read more about our <a href="https://www.notion.so/Deferral-Policy-The-AIE-Bootcamp-3dd151f0992447519ce5ed6d1ea12a62" class="">deferral policy here</a>.</p>
+						</div>
+					</div>
+					<div class="card mb-4 shadow border-0">
+						<div class="card-body">
+							<h6 class="rfs-9">What is the policy for refunds?</h6>
+							<p class="mb-0">We do not hesitate to give refunds. At the same time, we work hard to qualify each student before enrollment, and aim at a 0% withdrawal rate and refund rate in each cohort. Of course, life happens, and we promise to work with you when it does. Education is lifelong, and we'd like to join you on your AI career journey for the long haul..</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- FREE LLM COURSE -->
+
+<!-- FAQ -->
+<section class="py-4 py-xl-6 bg-ghost">
+	<div class="container-fluid">
+		<div class="row justify-content-center mb-4">
+			<div class="col-11 text-center">
+				<h2 class="text-uppercase fw-bold rfs-20">
+					Start Learning <span class="text-main-blue">For free</span>
+				</h2>
+				<p class="rfs-8 mw-6 m-auto">
+					Not ready to commit to such a massive undertaking as our accelerated 10-week bootcamp? Start learning for free today.
+				</p>
+			</div>
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="col-11 col-lg-4 text-center">
+				<a type="button" class="btn btn-primary text-uppercase border-0 shadow py-3 px-5 track-click" href="https://roadmap.sh/r/the-ai-engineering-bootcamp">AI Engineering Roadmap, 2025</a>
+				<p class="rfs-6 mt-4">Learn to build and evaluate production RAG, agent, and multi-agent applications, from prototype to production, at your own pace!</p>
+			</div>
+			<div class="col-11 col-lg-4 offset-lg-1 text-center">
+				<a type="button" class="btn text-uppercase border-0 shadow py-3 px-5 track-click" href="https://github.com/AI-Maker-Space/LLM-Engineering-Foundations-to-SLMs-Open-Source" target="_blank" rel="noopener" style="background-color: #28a745; color: #fff;">LLM Engineering - Foundations to SLMs</a>
+				<p class="rfs-6 mt-4">LLM Engineering refers to the emerging best-practices and tools for pretraining, post-training, and optimizing LLMs prior to production deployment. </p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="mb-2"></section>
+<!-- STICKY NAVBAR -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.getElementById('floatingNavbar');
+        const firstSection = document.getElementById('navTrigger');
+
+        function checkNavbarVisibility() {
+            const firstSectionBottom = firstSection.getBoundingClientRect().bottom;
+            if (firstSectionBottom <= 0) {
+                navbar.style.display = 'block';
+            } else {
+                navbar.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('scroll', checkNavbarVisibility);
+    });
+</script>
+</main>
+	
+
+
+<footer id='lc-footer'><!-- Mastermind Modal -->
+<div class="modal fade" id="masterMind" tabindex="-1" aria-labelledby="masterMind" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content rounded-3">
+			<div class="modal-header">
+				<h5 class="modal-title">RSVP for Mastermind!</h5>
+			</div>
+			<div class="modal-body p-3 p-lg-5">
+				
+                <div class='gf_browser_unknown gform_wrapper gform-theme gform-theme--foundation gform-theme--framework gform-theme--orbital' data-form-theme='orbital' data-form-index='0' id='gform_wrapper_16' style='display:none'><style>#gform_wrapper_16[data-form-index="0"].gform-theme,[data-parent-form="16_0"]{--gf-color-primary: #204ce5;--gf-color-primary-rgb: 32, 76, 229;--gf-color-primary-contrast: #fff;--gf-color-primary-contrast-rgb: 255, 255, 255;--gf-color-primary-darker: #001AB3;--gf-color-primary-lighter: #527EFF;--gf-color-secondary: #fff;--gf-color-secondary-rgb: 255, 255, 255;--gf-color-secondary-contrast: #112337;--gf-color-secondary-contrast-rgb: 17, 35, 55;--gf-color-secondary-darker: #F5F5F5;--gf-color-secondary-lighter: #FFFFFF;--gf-color-out-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-out-ctrl-light-rgb: 17, 35, 55;--gf-color-out-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-out-ctrl-light-lighter: #F5F5F5;--gf-color-out-ctrl-dark: #585e6a;--gf-color-out-ctrl-dark-rgb: 88, 94, 106;--gf-color-out-ctrl-dark-darker: #112337;--gf-color-out-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-color-in-ctrl: #fff;--gf-color-in-ctrl-rgb: 255, 255, 255;--gf-color-in-ctrl-contrast: #112337;--gf-color-in-ctrl-contrast-rgb: 17, 35, 55;--gf-color-in-ctrl-darker: #F5F5F5;--gf-color-in-ctrl-lighter: #FFFFFF;--gf-color-in-ctrl-primary: #204ce5;--gf-color-in-ctrl-primary-rgb: 32, 76, 229;--gf-color-in-ctrl-primary-contrast: #fff;--gf-color-in-ctrl-primary-contrast-rgb: 255, 255, 255;--gf-color-in-ctrl-primary-darker: #001AB3;--gf-color-in-ctrl-primary-lighter: #527EFF;--gf-color-in-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-in-ctrl-light-rgb: 17, 35, 55;--gf-color-in-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-in-ctrl-light-lighter: #F5F5F5;--gf-color-in-ctrl-dark: #585e6a;--gf-color-in-ctrl-dark-rgb: 88, 94, 106;--gf-color-in-ctrl-dark-darker: #112337;--gf-color-in-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-radius: 3px;--gf-font-size-secondary: 14px;--gf-font-size-tertiary: 13px;--gf-icon-ctrl-number: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 0C4.26522 5.96046e-08 4.51957 0.105357 4.70711 0.292893L7.70711 3.29289C8.09763 3.68342 8.09763 4.31658 7.70711 4.70711C7.31658 5.09763 6.68342 5.09763 6.29289 4.70711L4 2.41421L1.70711 4.70711C1.31658 5.09763 0.683417 5.09763 0.292893 4.70711C-0.0976311 4.31658 -0.097631 3.68342 0.292893 3.29289L3.29289 0.292893C3.48043 0.105357 3.73478 0 4 0ZM0.292893 9.29289C0.683417 8.90237 1.31658 8.90237 1.70711 9.29289L4 11.5858L6.29289 9.29289C6.68342 8.90237 7.31658 8.90237 7.70711 9.29289C8.09763 9.68342 8.09763 10.3166 7.70711 10.7071L4.70711 13.7071C4.31658 14.0976 3.68342 14.0976 3.29289 13.7071L0.292893 10.7071C-0.0976311 10.3166 -0.0976311 9.68342 0.292893 9.29289Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-select: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.097631 1.31658 -0.097631 1.70711 0.292893L5 3.58579L8.29289 0.292893C8.68342 -0.0976311 9.31658 -0.0976311 9.70711 0.292893C10.0976 0.683417 10.0976 1.31658 9.70711 1.70711L5.70711 5.70711C5.31658 6.09763 4.68342 6.09763 4.29289 5.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683418 0.292893 0.292893Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-search: url("data:image/svg+xml,%3Csvg width='640' height='640' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M256 128c-70.692 0-128 57.308-128 128 0 70.691 57.308 128 128 128 70.691 0 128-57.309 128-128 0-70.692-57.309-128-128-128zM64 256c0-106.039 85.961-192 192-192s192 85.961 192 192c0 41.466-13.146 79.863-35.498 111.248l154.125 154.125c12.496 12.496 12.496 32.758 0 45.254s-32.758 12.496-45.254 0L367.248 412.502C335.862 434.854 297.467 448 256 448c-106.039 0-192-85.962-192-192z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-label-space-y-secondary: var(--gf-label-space-y-md-secondary);--gf-ctrl-border-color: #686e77;--gf-ctrl-size: var(--gf-ctrl-size-md);--gf-ctrl-label-color-primary: #112337;--gf-ctrl-label-color-secondary: #112337;--gf-ctrl-choice-size: var(--gf-ctrl-choice-size-md);--gf-ctrl-checkbox-check-size: var(--gf-ctrl-checkbox-check-size-md);--gf-ctrl-radio-check-size: var(--gf-ctrl-radio-check-size-md);--gf-ctrl-btn-font-size: var(--gf-ctrl-btn-font-size-md);--gf-ctrl-btn-padding-x: var(--gf-ctrl-btn-padding-x-md);--gf-ctrl-btn-size: var(--gf-ctrl-btn-size-md);--gf-ctrl-btn-border-color-secondary: #686e77;--gf-ctrl-file-btn-bg-color-hover: #EBEBEB;--gf-field-img-choice-size: var(--gf-field-img-choice-size-md);--gf-field-img-choice-card-space: var(--gf-field-img-choice-card-space-md);--gf-field-img-choice-check-ind-size: var(--gf-field-img-choice-check-ind-size-md);--gf-field-img-choice-check-ind-icon-size: var(--gf-field-img-choice-check-ind-icon-size-md);--gf-field-pg-steps-number-color: rgba(17, 35, 55, 0.8);}</style><div id='gf_16' class='gform_anchor' tabindex='-1'></div>
+                        <div class='gform_heading'>
+							<p class='gform_required_legend'>&quot;<span class="gfield_required gfield_required_asterisk">*</span>&quot; indicates required fields</p>
+                        </div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_16' id='gform_16'  action='/the-ai-engineering-bootcamp/#gf_16' data-formid='16' novalidate><div class='gf_invisible ginput_recaptchav3' data-sitekey='6Lez2EYrAAAAANoKqE8xdxtgwPadnpjXPBJ_eIuX' data-tabindex='0'><input id="input_62c894f2ee9f4fa66cf4e125a5ac8862" class="gfield_recaptcha_response" type="hidden" name="input_62c894f2ee9f4fa66cf4e125a5ac8862" value=""/></div>
+                        <div class='gform-body gform_body'><div id='gform_fields_16' class='gform_fields top_label form_sublabel_below description_below validation_below'><fieldset id="field_16_1" class="gfield gfield--type-name gfield--input-type-name gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><legend class='gfield_label gform-field-label gfield_label_before_complex' >Name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></legend><div class='ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row' id='input_16_1'>
+                            
+                            <span id='input_16_1_3_container' class='name_first gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_1.3' id='input_16_1_3' value=''   aria-required='true'     />
+                                                    <label for='input_16_1_3' class='gform-field-label gform-field-label--type-sub '>First</label>
+                                                </span>
+                            
+                            <span id='input_16_1_6_container' class='name_last gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_1.6' id='input_16_1_6' value=''   aria-required='true'     />
+                                                    <label for='input_16_1_6' class='gform-field-label gform-field-label--type-sub '>Last</label>
+                                                </span>
+                            
+                        </div></fieldset><div id="field_16_3" class="gfield gfield--type-email gfield--input-type-email gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible gpev-field"  data-field-class="gpev-field" ><label class='gfield_label gform-field-label' for='input_16_3'>Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_3' id='input_16_3' type='email' value='' class='large'    aria-required="true" aria-invalid="false"  />
+                        </div></div><fieldset id="field_16_4" class="gfield gfield--type-radio gfield--type-choice gfield--input-type-radio gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><legend class='gfield_label gform-field-label' >Will you be attending?<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></legend><div class='ginput_container ginput_container_radio'><div class='gfield_radio' id='input_16_4'>
+			<div class='gchoice gchoice_16_4_0'>
+					<input class='gfield-choice-input' name='input_4' type='radio' value='Yes! Send me the calendar invite!'  id='choice_16_4_0' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_16_4_0' id='label_16_4_0' class='gform-field-label gform-field-label--type-inline'>Yes! Send me the calendar invite!</label>
+			</div>
+			<div class='gchoice gchoice_16_4_1'>
+					<input class='gfield-choice-input' name='input_4' type='radio' value='No, but I&#039;m interested in the recording'  id='choice_16_4_1' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_16_4_1' id='label_16_4_1' class='gform-field-label gform-field-label--type-inline'>No, but I'm interested in the recording</label>
+			</div>
+			<div class='gchoice gchoice_16_4_2'>
+					<input class='gfield-choice-input' name='input_4' type='radio' value='No, and please remove me from your Weekly Mastermind list!'  id='choice_16_4_2' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_16_4_2' id='label_16_4_2' class='gform-field-label gform-field-label--type-inline'>No, and please remove me from your Weekly Mastermind list!</label>
+			</div></div></div></fieldset><fieldset id="field_16_5" class="gfield gfield--type-radio gfield--type-choice gfield--input-type-radio gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><legend class='gfield_label gform-field-label' >If attending live, will you take part in networking activities with other alumni and students?<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></legend><div class='ginput_container ginput_container_radio'><div class='gfield_radio' id='input_16_5'>
+			<div class='gchoice gchoice_16_5_0'>
+					<input class='gfield-choice-input' name='input_5' type='radio' value='Absolutely!'  id='choice_16_5_0' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_16_5_0' id='label_16_5_0' class='gform-field-label gform-field-label--type-inline'>Absolutely!</label>
+			</div>
+			<div class='gchoice gchoice_16_5_1'>
+					<input class='gfield-choice-input' name='input_5' type='radio' value='Not really my vibe - count me out.'  id='choice_16_5_1' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_16_5_1' id='label_16_5_1' class='gform-field-label gform-field-label--type-inline'>Not really my vibe - count me out.</label>
+			</div></div></div></fieldset><fieldset id="field_16_6" class="gfield gfield--type-radio gfield--type-choice gfield--input-type-radio field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><legend class='gfield_label gform-field-label' >I give AI Makerspace permission to record my likeness, voice, and statements on video in these Mastermind sessions and to use these recordings—without time limit—for promotional or marketing purposes (e.g., website, social media, advertisements, and other publicity)</legend><div class='ginput_container ginput_container_radio'><div class='gfield_radio' id='input_16_6'>
+			<div class='gchoice gchoice_16_6_0'>
+					<input class='gfield-choice-input' name='input_6' type='radio' value='Yes, I opt in'  id='choice_16_6_0' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_16_6_0' id='label_16_6_0' class='gform-field-label gform-field-label--type-inline'>Yes, I opt in</label>
+			</div>
+			<div class='gchoice gchoice_16_6_1'>
+					<input class='gfield-choice-input' name='input_6' type='radio' value='No, I do not opt in'  id='choice_16_6_1' onchange='gformToggleRadioOther( this )'    />
+					<label for='choice_16_6_1' id='label_16_6_1' class='gform-field-label gform-field-label--type-inline'>No, I do not opt in</label>
+			</div></div></div></fieldset></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_16' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Submit'  /> <input type='hidden' name='gform_ajax' value='form_id=16&amp;title=&amp;description=&amp;tabindex=0&amp;theme=orbital&amp;styles=[]&amp;hash=f8b32b0d1938d4a6c1643c167af7abc0' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_16' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_16' id='gform_theme_16' value='orbital' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_16' id='gform_style_settings_16' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_16' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='16' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_16' value='WyJ7XCI0XCI6W1wiYjcxYjFmMTA2NzY2ZmIzZGQyNDBiMjExOGYyOTljMzNcIixcIjY2YjZjYzQ3NTUzMjdiY2UzM2I3YWE4NjNmMTczMTI0XCIsXCJlZjc3ODI0MGNkZTY4ODM0NTIzY2IwYmFmMjAwY2M1OFwiXSxcIjVcIjpbXCI5YzFmZDViOWE3YmEyMjc1MzI4Y2JmMTI5YWExZmM2YlwiLFwiN2QyOWY5MzlhMTBlZmU3ODgxMWIzNWMwYWQyMDYwZmVcIl0sXCI2XCI6W1wiMzA2NmE1MTdhMzFjNjNjNWIwZTdjMTYzMDM5ZTA3MTRcIixcIjdhZjFlNmY5ODc1Mjk5ODFjNTMxNjJlYjA4MzljZmMyXCJdfSIsIjBlZTMxMDVhYTNlY2Y0OTMwNDIwM2Q5ZGI3ODllOTM2Il0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_16' id='gform_target_page_number_16' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_16' id='gform_source_page_number_16' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_16' id='gform_ajax_frame_16' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 16, 'https://aimakerspace.io/wp-content/plugins/gravityforms/images/spinner.svg', false );jQuery('#gform_ajax_frame_16').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_16');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_16').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){form_content.find('form').css('opacity', 0);jQuery('#gform_wrapper_16').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_16').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_16').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_16').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_16').val();gformInitSpinner( 16, 'https://aimakerspace.io/wp-content/plugins/gravityforms/images/spinner.svg', false );jQuery(document).trigger('gform_page_loaded', [16, current_page]);window['gf_submitting_16'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_16').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_16').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [16]);window['gf_submitting_16'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_16').text());}else{jQuery('#gform_16').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "16", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_16" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_16";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_16" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 16, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Newsletter Subscribe Modal -->
+<div class="modal fade" id="signupEdge" tabindex="-1" aria-labelledby="signupEdge" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content rounded-3">
+			<div class="modal-header">
+				<h5 class="modal-title">Sign Up for The LLM Edge</h5>
+			</div>
+			<div class="modal-body p-3 p-lg-5">
+				<script async data-uid="1d464288d2" src="https://fabulous-producer-5917.kit.com/1d464288d2/index.js"></script>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Course Announcement Subscribe Modal -->
+<div class="modal fade" id="signupCourse" tabindex="-1" aria-labelledby="signupCourse" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content rounded-3">
+			<div class="modal-header">
+				<h5 class="modal-title">Sign Up for Course Announcements</h5>
+			</div>
+			<div class="modal-body p-3 p-lg-5">
+				<script async data-uid="ddbc827e1d" src="https://fabulous-producer-5917.kit.com/ddbc827e1d/index.js"></script>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ROADMAP GATE -->
+<div class="modal fade" id="roadmapGate" tabindex="-1" aria-labelledby="roadmapGate" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content rounded-3">
+			<div class="modal-header">
+				<h6 class="modal-title">Start the AI Engineering Roadmap!</h6>
+			</div>
+			<div class="modal-body p-3 p-lg-5">
+				
+                <div class='gf_browser_unknown gform_wrapper gform-theme gform-theme--foundation gform-theme--framework gform-theme--orbital' data-form-theme='orbital' data-form-index='0' id='gform_wrapper_12' ><style>#gform_wrapper_12[data-form-index="0"].gform-theme,[data-parent-form="12_0"]{--gf-color-primary: #204ce5;--gf-color-primary-rgb: 32, 76, 229;--gf-color-primary-contrast: #fff;--gf-color-primary-contrast-rgb: 255, 255, 255;--gf-color-primary-darker: #001AB3;--gf-color-primary-lighter: #527EFF;--gf-color-secondary: #fff;--gf-color-secondary-rgb: 255, 255, 255;--gf-color-secondary-contrast: #112337;--gf-color-secondary-contrast-rgb: 17, 35, 55;--gf-color-secondary-darker: #F5F5F5;--gf-color-secondary-lighter: #FFFFFF;--gf-color-out-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-out-ctrl-light-rgb: 17, 35, 55;--gf-color-out-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-out-ctrl-light-lighter: #F5F5F5;--gf-color-out-ctrl-dark: #585e6a;--gf-color-out-ctrl-dark-rgb: 88, 94, 106;--gf-color-out-ctrl-dark-darker: #112337;--gf-color-out-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-color-in-ctrl: #fff;--gf-color-in-ctrl-rgb: 255, 255, 255;--gf-color-in-ctrl-contrast: #112337;--gf-color-in-ctrl-contrast-rgb: 17, 35, 55;--gf-color-in-ctrl-darker: #F5F5F5;--gf-color-in-ctrl-lighter: #FFFFFF;--gf-color-in-ctrl-primary: #204ce5;--gf-color-in-ctrl-primary-rgb: 32, 76, 229;--gf-color-in-ctrl-primary-contrast: #fff;--gf-color-in-ctrl-primary-contrast-rgb: 255, 255, 255;--gf-color-in-ctrl-primary-darker: #001AB3;--gf-color-in-ctrl-primary-lighter: #527EFF;--gf-color-in-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-in-ctrl-light-rgb: 17, 35, 55;--gf-color-in-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-in-ctrl-light-lighter: #F5F5F5;--gf-color-in-ctrl-dark: #585e6a;--gf-color-in-ctrl-dark-rgb: 88, 94, 106;--gf-color-in-ctrl-dark-darker: #112337;--gf-color-in-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-radius: 3px;--gf-font-size-secondary: 14px;--gf-font-size-tertiary: 13px;--gf-icon-ctrl-number: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 0C4.26522 5.96046e-08 4.51957 0.105357 4.70711 0.292893L7.70711 3.29289C8.09763 3.68342 8.09763 4.31658 7.70711 4.70711C7.31658 5.09763 6.68342 5.09763 6.29289 4.70711L4 2.41421L1.70711 4.70711C1.31658 5.09763 0.683417 5.09763 0.292893 4.70711C-0.0976311 4.31658 -0.097631 3.68342 0.292893 3.29289L3.29289 0.292893C3.48043 0.105357 3.73478 0 4 0ZM0.292893 9.29289C0.683417 8.90237 1.31658 8.90237 1.70711 9.29289L4 11.5858L6.29289 9.29289C6.68342 8.90237 7.31658 8.90237 7.70711 9.29289C8.09763 9.68342 8.09763 10.3166 7.70711 10.7071L4.70711 13.7071C4.31658 14.0976 3.68342 14.0976 3.29289 13.7071L0.292893 10.7071C-0.0976311 10.3166 -0.0976311 9.68342 0.292893 9.29289Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-select: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.097631 1.31658 -0.097631 1.70711 0.292893L5 3.58579L8.29289 0.292893C8.68342 -0.0976311 9.31658 -0.0976311 9.70711 0.292893C10.0976 0.683417 10.0976 1.31658 9.70711 1.70711L5.70711 5.70711C5.31658 6.09763 4.68342 6.09763 4.29289 5.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683418 0.292893 0.292893Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-search: url("data:image/svg+xml,%3Csvg width='640' height='640' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M256 128c-70.692 0-128 57.308-128 128 0 70.691 57.308 128 128 128 70.691 0 128-57.309 128-128 0-70.692-57.309-128-128-128zM64 256c0-106.039 85.961-192 192-192s192 85.961 192 192c0 41.466-13.146 79.863-35.498 111.248l154.125 154.125c12.496 12.496 12.496 32.758 0 45.254s-32.758 12.496-45.254 0L367.248 412.502C335.862 434.854 297.467 448 256 448c-106.039 0-192-85.962-192-192z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-label-space-y-secondary: var(--gf-label-space-y-md-secondary);--gf-ctrl-border-color: #686e77;--gf-ctrl-size: var(--gf-ctrl-size-md);--gf-ctrl-label-color-primary: #112337;--gf-ctrl-label-color-secondary: #112337;--gf-ctrl-choice-size: var(--gf-ctrl-choice-size-md);--gf-ctrl-checkbox-check-size: var(--gf-ctrl-checkbox-check-size-md);--gf-ctrl-radio-check-size: var(--gf-ctrl-radio-check-size-md);--gf-ctrl-btn-font-size: var(--gf-ctrl-btn-font-size-md);--gf-ctrl-btn-padding-x: var(--gf-ctrl-btn-padding-x-md);--gf-ctrl-btn-size: var(--gf-ctrl-btn-size-md);--gf-ctrl-btn-border-color-secondary: #686e77;--gf-ctrl-file-btn-bg-color-hover: #EBEBEB;--gf-field-img-choice-size: var(--gf-field-img-choice-size-md);--gf-field-img-choice-card-space: var(--gf-field-img-choice-card-space-md);--gf-field-img-choice-check-ind-size: var(--gf-field-img-choice-check-ind-size-md);--gf-field-img-choice-check-ind-icon-size: var(--gf-field-img-choice-check-ind-icon-size-md);--gf-field-pg-steps-number-color: rgba(17, 35, 55, 0.8);}</style><div id='gf_12' class='gform_anchor' tabindex='-1'></div>
+                        <div class='gform_heading'>
+							<p class='gform_required_legend'>&quot;<span class="gfield_required gfield_required_asterisk">*</span>&quot; indicates required fields</p>
+                        </div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_12' id='gform_12'  action='/the-ai-engineering-bootcamp/#gf_12' data-formid='12' novalidate><div class='gf_invisible ginput_recaptchav3' data-sitekey='6Lez2EYrAAAAANoKqE8xdxtgwPadnpjXPBJ_eIuX' data-tabindex='0'><input id="input_7ac0ea4730671456364753025c38a285" class="gfield_recaptcha_response" type="hidden" name="input_7ac0ea4730671456364753025c38a285" value=""/></div>
+                        <div class='gform-body gform_body'><div id='gform_fields_12' class='gform_fields top_label form_sublabel_below description_below validation_below'><fieldset id="field_12_4" class="gfield gfield--type-name gfield--input-type-name gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><legend class='gfield_label gform-field-label gfield_label_before_complex' >Name<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></legend><div class='ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row' id='input_12_4'>
+                            
+                            <span id='input_12_4_3_container' class='name_first gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_4.3' id='input_12_4_3' value=''   aria-required='true'     />
+                                                    <label for='input_12_4_3' class='gform-field-label gform-field-label--type-sub '>First</label>
+                                                </span>
+                            
+                            <span id='input_12_4_6_container' class='name_last gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_4.6' id='input_12_4_6' value=''   aria-required='true'     />
+                                                    <label for='input_12_4_6' class='gform-field-label gform-field-label--type-sub '>Last</label>
+                                                </span>
+                            
+                        </div></fieldset><div id="field_12_3" class="gfield gfield--type-email gfield--input-type-email gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible gpev-field"  data-field-class="gpev-field" ><label class='gfield_label gform-field-label' for='input_12_3'>Email<span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_3' id='input_12_3' type='email' value='' class='large'    aria-required="true" aria-invalid="false"  />
+                        </div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <input type='submit' id='gform_submit_button_12' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' value='Let&#039;s goooo!'  /> <input type='hidden' name='gform_ajax' value='form_id=12&amp;title=&amp;description=&amp;tabindex=0&amp;theme=orbital&amp;styles=[]&amp;hash=f83ff6d0efd052fc51786c95abfa5ee4' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_12' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_12' id='gform_theme_12' value='orbital' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_12' id='gform_style_settings_12' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_12' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='12' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_12' value='WyJbXSIsIjFmMDU1ZWVlM2Q2ZWIwYjM5N2YyMmZhZjY4ZTY3NTBkIl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_12' id='gform_target_page_number_12' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_12' id='gform_source_page_number_12' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_12' id='gform_ajax_frame_12' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script>
+gform.initializeOnLoaded( function() {gformInitSpinner( 12, 'https://aimakerspace.io/wp-content/plugins/gravityforms/images/spinner.svg', false );jQuery('#gform_ajax_frame_12').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_12');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_12').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_12').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_12').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_12').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_12').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_12').val();gformInitSpinner( 12, 'https://aimakerspace.io/wp-content/plugins/gravityforms/images/spinner.svg', false );jQuery(document).trigger('gform_page_loaded', [12, current_page]);window['gf_submitting_12'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_12').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_12').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [12]);window['gf_submitting_12'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_12').text());}else{jQuery('#gform_12').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "12", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_12" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_12";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_12" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 12, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+</script>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- CURRICULUM GATE -->
+<div class="modal fade" id="curriculumGate" tabindex="-1" aria-labelledby="curriculumGate" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content rounded-3">
+			<div class="modal-header">
+				<h6 class="modal-title">See a weekly breakdown of the curriculum!</h6>
+			</div>
+			<div class="modal-body p-3 p-lg-5">
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- TEAMS BULK SEATS FORM MODAL -->
+<div class="modal fade" id="bulkseatsForm" tabindex="-1" aria-labelledby="bulkseatsFormLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-fullscreen">
+		<div class="modal-content bg-white rounded-3">
+			<div class="modal-body p-3 p-lg-5 overflow-auto">
+				<h4 class="rfs-14">Upskill Your Team</h4>
+				<p>Have a team of engineers who need to leverage AI-assisted development to increase production velocity?<br>Let's hop on a quick call to see if <a href="https://aimakerspace.io/the-ai-engineering-bootcamp/" target="_blank" class="track-click" data-track-name="teams_cta_modal_bootcamp">The Bootcamp</a> is the right option for your team.</p>
+				<iframe src="https://aimakerspace.pipedrive.com/scheduler/wOJBLQcb/team-training" style="width:100%; height:100%; border:0;" loading="lazy" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- ENTERPRISE SCHEDULING MODAL -->
+<div class="modal fade" id="enterpriseCall" tabindex="-1" aria-labelledby="enterpriseCall" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-fullscreen">
+		<div class="modal-content rounded-3">
+			<div class="modal-body p-3 overflow-hidden">
+				<h4 class="rfs-14">Let's chat!</h4>
+				<iframe src="https://aimakerspace.pipedrive.com/scheduler/4jpmoJI7/exploratory-call" title="Enterprise Exploratory Call" frameborder="0" height="100%" width="100%" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- THANK YOU FOR SUBSCRIBING LINK TRIGGERS from KIT -->
+<!-- ?modal=caSubscribe -->
+<div class="modal fade" id="caSubscribe" tabindex="-1" aria-labelledby="subscribeThanks" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content rounded-3">
+			<div class="modal-body p-5 pt-4">
+				<h5 class="modal-title pt-2 m-0">You're all set!</h5>
+				<p class="m-0 p-0">You have successfully subscribed to Course Announcements!</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- LLME COURSE SIGNUP THANK YOU MODAL -->
+<!-- ?modal=thanksLLM -->
+<div class="modal fade" id="thanksLLM" tabindex="-1" aria-labelledby="thanksLLM" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-lg">
+		<div class="modal-content rounded-3">
+			<div class="modal-body p-5 pt-4">
+				<h5 class="modal-title pt-2 m-0">You're all set!</h5>
+				<p class="m-0 p-0">You have successfully subscribed to the LLM Foundations Course!</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- GREG LINKEDIN POST ABOUT ACCEPTANCE MODAL -->
+<div class="modal fade" id="acceptanceRate" tabindex="-1" aria-labelledby="acceptanceRate" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content bg-white rounded-3">
+			<div class="modal-body p-3 p-lg-5 overflow-auto text-center">
+				<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7359339438843314176" height="2124" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div id="footer-section" class="text-light bg-deep-blue pt-5 py-3">
+<div class="text-center">
+<!-- DISCORD -->
+<a class="text-decoration-none" href="https://bit.ly/aim-discord-footer" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="1.75em" height="1.75em" fill="currentColor" class="text-ghost mx-3 my-2" viewBox="0 0 16 16"><path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/></svg></a>
+
+<!-- GITHUB -->
+<a class="text-decoration-none" href="https://bit.ly/aimindex" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="1.75em" height="1.75em" fill="currentColor" class="text-ghost mx-3 my-2" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/></svg></a>
+
+<!-- YOUTUBE -->
+<a class="text-decoration-none" href="https://bit.ly/3TKhXUg" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="1.75em" height="1.75em" fill="currentColor" class="text-ghost mx-3 my-2" viewBox="0 0 16 16"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/></svg></a>
+		
+<!-- CALENDAR -->
+<a class="text-decoration-none" href="https://bit.ly/4istEdG" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="1.75em" height="1.75em" fill="currentColor" class="text-ghost mx-3 my-2" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/><path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5zM11 7.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/></svg></a>
+	
+<!-- LINKEDIN -->
+<a class="text-decoration-none" href="https://bit.ly/3J3eUS8" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="1.75em" height="1.75em" fill="currentColor" class="text-ghost mx-3 my-2" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+</svg></a>
+
+<!-- TWITTER -->
+<a class="text-decoration-none" href="https://bit.ly/3THDk8z" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="1.75em" height="1.75em" fill="currentColor" class="text-ghost mx-3 my-2" viewBox="0 0 16 16"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/></svg></a>
+
+<!-- TIKTOK -->
+<a class="text-decoration-none" href="https://bit.ly/3TFN9np" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="1.75em" height="1.75em" fill="currentColor" class="text-ghost mx-3 my-2" viewBox="0 0 16 16"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg></a>
+	
+<!-- INSTAGRAM -->
+<a class="text-decoration-none" href="https://bit.ly/4gynSpY" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="1.75em" height="1.75em" fill="currentColor" class="text-ghost mx-3 my-2" viewBox="0 0 16 16" ><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a>	
+
+<!-- SHOP --->
+<a class="text-decoration-none" href="https://wordpress-1178413-4511952.cloudwaysapps.com/shop"><svg xmlns="http://www.w3.org/2000/svg"  width="1.75em" height="1.75em" fill="currentColor" class="text-ghost mx-3 my-2" viewBox="0 0 24 24"><path d="M15.366 3.438L18.577 9H22v2h-1.167l-.757 9.083a1 1 0 0 1-.996.917H4.92a1 1 0 0 1-.996-.917L3.166 11H2V9h3.422l3.212-5.562 1.732 1L7.732 9h8.535l-2.633-4.562 1.732-1zM18.826 11H5.173l.667 8h12.319l.667-8zM13 13v4h-2v-4h2zm-4 0v4H7v-4h2zm8 0v4h-2v-4h2z" /></svg></a>
+</div>
+<div class="text-center mt-5">
+	<div>
+		<p><small>Copyright © AI Makerspace 2023 - 2025</small></p>
+	</div>
+</div>
+</div></footer>
+
+
+
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/aimakerspace\/*","\/wp-content\/themes\/picostrap5\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+	<script id="lc_script_tag" type="module"></script>
+	<script type="text/javascript"> _linkedin_partner_id = "7223668"; window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || []; window._linkedin_data_partner_ids.push(_linkedin_partner_id); </script><script type="text/javascript"> (function(l) { if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])}; window.lintrk.q=[]} var s = document.getElementsByTagName("script")[0]; var b = document.createElement("script"); b.type = "text/javascript";b.async = true; b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js"; s.parentNode.insertBefore(b, s);})(window.lintrk); </script> <noscript> <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7223668&fmt=gif" /> </noscript>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var bootstrapScript = document.getElementById('bootstrap5-childtheme-js') || document.getElementById('bootstrap5-js');
+            if (bootstrapScript) {
+                if (document.readyState === 'complete' || typeof bootstrap !== 'undefined') {
+                    
+                    // Bootstrap is loaded and available 
+                    
+                    // Initialize Bootstrap  tooltips
+                    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                    tooltipTriggerList.map(function(tooltipTriggerEl) {
+                        return new bootstrap.Tooltip(tooltipTriggerEl);
+                    });
+
+                    // Initialize Bootstrap popovers  
+                    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+                    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+                    
+                } else {
+                    bootstrapScript.addEventListener('load', initializeBootstrapTooltips);
+                }
+            } else {
+                console.error('Bootstrap script not found');
+            }
+        });
+    </script>
+    <script type="text/javascript">
+jQuery( function() {
+if ( window.Cookies ) {
+Cookies.set( "gp_easy_passthrough_session", "4f53db794a52395b820be6174faf5eb0||1757123471||1757123111", {"expires": new Date( new Date().getTime() + 1800000 ),"path": "/","domain": "","SameSite": "Lax","secure": false} );
+}
+} );
+</script>
+	<script>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel='stylesheet' id='wc-blocks-style-css' href='https://aimakerspace.io/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-10.1.2' media='all' />
+<link rel='stylesheet' id='lc-aos-css' href='https://aimakerspace.io/wp-content/plugins/livecanvas/modules/optin-extra-assets/aos.css?ver=6.8.2' media='all' />
+<link rel='stylesheet' id='gravity_forms_theme_reset-css' href='https://aimakerspace.io/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-reset.min.css?ver=2.9.17.1' media='all' />
+<link rel='stylesheet' id='gravity_forms_theme_foundation-css' href='https://aimakerspace.io/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-foundation.min.css?ver=2.9.17.1' media='all' />
+<link rel='stylesheet' id='gravity_forms_theme_framework-css' href='https://aimakerspace.io/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-framework.min.css?ver=2.9.17.1' media='all' />
+<link rel='stylesheet' id='gravity_forms_orbital_theme-css' href='https://aimakerspace.io/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-orbital-theme.min.css?ver=2.9.17.1' media='all' />
+<script src="https://aimakerspace.io/wp-content/plugins/livecanvas/modules/optin-extra-assets/aos-with-init.js?ver=6.8.2" id="lc-aos-js"></script>
+<script src="https://aimakerspace.io/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.1.2" id="sourcebuster-js-js"></script>
+<script id="wc-order-attribution-js-extra">
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https:\/\/aimakerspace.io\/wp-admin\/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+</script>
+<script src="https://aimakerspace.io/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.1.2" id="wc-order-attribution-js"></script>
+<script id="gforms_recaptcha_recaptcha-js-extra">
+var gforms_recaptcha_recaptcha_strings = {"nonce":"fbefdd9672","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https:\/\/aimakerspace.io\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","connection_type":"classic","disable_badge":"1","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6Lez2EYrAAAAANoKqE8xdxtgwPadnpjXPBJ_eIuX"};
+</script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lez2EYrAAAAANoKqE8xdxtgwPadnpjXPBJ_eIuX&amp;ver=2.0.0" id="gforms_recaptcha_recaptcha-js" defer data-wp-strategy="defer"></script>
+<script src="https://aimakerspace.io/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js?ver=2.0.0" id="gforms_recaptcha_frontend-js" defer data-wp-strategy="defer"></script>
+<script src="https://aimakerspace.io/wp-content/themes/aimakerspace/js/bootstrap.bundle.min.js" id="bootstrap5-childtheme-js" defer data-wp-strategy="defer"></script>
+<script src="https://aimakerspace.io/wp-content/themes/aimakerspace/js/custom.js" id="custom-js" defer data-wp-strategy="defer"></script>
+<script src="https://aimakerspace.io/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script src="https://aimakerspace.io/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script src="https://aimakerspace.io/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script src="https://aimakerspace.io/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14" id="wp-a11y-js"></script>
+<script defer='defer' src="https://aimakerspace.io/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=2.9.17.1" id="gform_json-js"></script>
+<script id="gform_gravityforms-js-extra">
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled"},"vars":{"images_url":"https:\/\/aimakerspace.io\/wp-content\/plugins\/gravityforms\/images"}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https:\/\/aimakerspace.io\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/aimakerspace.io\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"cd119d09ee036af08def06f93cdf735b","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gf_global = {"gf_currency_config":{"name":"U.S. Dollar","symbol_left":"$","symbol_right":"","symbol_padding":"","thousand_separator":",","decimal_separator":".","decimals":2,"code":"USD"},"base_url":"https:\/\/aimakerspace.io\/wp-content\/plugins\/gravityforms","number_formats":[],"spinnerUrl":"https:\/\/aimakerspace.io\/wp-content\/plugins\/gravityforms\/images\/spinner.svg","version_hash":"cd119d09ee036af08def06f93cdf735b","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+</script>
+<script defer='defer' src="https://aimakerspace.io/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=2.9.17.1" id="gform_gravityforms-js"></script>
+<script id="gform_conditional_logic-js-extra">
+var gf_legacy = {"is_legacy":""};
+</script>
+<script defer='defer' src="https://aimakerspace.io/wp-content/plugins/gravityforms/js/conditional_logic.min.js?ver=2.9.17.1" id="gform_conditional_logic-js"></script>
+<script defer='defer' src="https://aimakerspace.io/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=380b7a5ec0757c78876bc8a59488f2f3" id="gform_gravityforms_utils-js"></script>
+<script defer='defer' src="https://aimakerspace.io/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=21e5a4db1670166692ac5745329bfc80" id="gform_gravityforms_theme_vendors-js"></script>
+<script id="gform_gravityforms_theme-js-extra">
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"cd119d09ee036af08def06f93cdf735b"},"ajax":{"ajaxurl":"https:\/\/aimakerspace.io\/wp-admin\/admin-ajax.php","ajax_submission_nonce":"cbe0a0e18b","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https:\/\/aimakerspace.io\/wp-content\/plugins\/gravityforms\/assets\/js\/dist\/","config_nonce":"9ee12f4821"};
+</script>
+<script defer='defer' src="https://aimakerspace.io/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=123af0257f6f333b67adf5d27ef3db93" id="gform_gravityforms_theme-js"></script>
+<script src="https://aimakerspace.io/wp-content/plugins/gp-easy-passthrough/js/vendor/js.cookie.js?ver=1.10.1" id="gpep_vendor_cookie-js"></script>
+<script defer='defer' src="https://aimakerspace.io/wp-content/plugins/gravityformsconvertkit/assets/js/dist/vendor-theme.min.js?ver=1.2.0" id="gform_convertkit_vendor_theme-js"></script>
+<script defer='defer' src="https://aimakerspace.io/wp-content/plugins/gravityformsconvertkit/assets/js/dist/scripts-theme.min.js?ver=1.2.0" id="gform_convertkit_theme-js"></script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 16) {gf_global["number_formats"][16] = {"1":{"price":false,"value":false},"3":{"price":false,"value":false},"4":{"price":false,"value":false},"5":{"price":false,"value":false},"6":{"price":false,"value":false}};if(window['jQuery']){if(!window['gf_form_conditional_logic'])window['gf_form_conditional_logic'] = new Array();window['gf_form_conditional_logic'][16] = { logic: { 5: {"field":{"enabled":true,"actionType":"show","logicType":"all","rules":[{"fieldId":"4","operator":"is","value":"Yes! Send me the calendar invite!"}]},"nextButton":null,"section":null} }, dependents: { 5: [5] }, animation: 0, defaults: {"1":{"1.2":"","1.3":"","1.4":"","1.6":"","1.8":""}}, fields: {"1":[],"3":[],"4":[5],"5":[],"6":[]} }; if(!window['gf_number_format'])window['gf_number_format'] = 'decimal_dot';jQuery(document).ready(function(){gform.utils.trigger({ event: 'gform/conditionalLogic/init/start', native: false, data: { formId: 16, fields: null, isInit: true } });window['gformInitPriceFields']();gf_apply_rules(16, [5], true);jQuery('#gform_wrapper_16').show();jQuery('#gform_wrapper_16 form').css('opacity', '');jQuery(document).trigger('gform_post_conditional_logic', [16, null, true]);gform.utils.trigger({ event: 'gform/conditionalLogic/init/end', native: false, data: { formId: 16, fields: null, isInit: true } });} );} } } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "16", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_16" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_16";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_16" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 16, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+<script>
+gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 12) {} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } );
+</script>
+<script>
+gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "12", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_12" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_12";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_12" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 12, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );
+</script>
+
+	</body>
+</html>
+
+
+<!-- Cache served by breeze CACHE - Last modified: Sat, 06 Sep 2025 01:21:12 GMT -->

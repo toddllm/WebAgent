@@ -1,0 +1,29 @@
+# WebWatcher Deep Research Agent Dependencies
+
+# Core ML & Web
+vllm>=0.6.2
+qwen-agent>=0.0.9
+gradio>=4.0.0
+
+# Web scraping & content extraction  
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+trafilatura>=1.8.0
+duckduckgo-search>=6.0.0
+
+# Optional: Real OCR
+pytesseract>=0.3.10
+
+# Optional: For better HTML parsing
+lxml>=4.9.0
+selectolax>=0.3.0
+
+# Utilities
+python-dotenv>=1.0.0
+pyyaml>=6.0.0
+pathlib
+
+# Note: For production use, also install:
+# - serpapi (for Google Search API)
+# - scraper-api-python (for ScraperAPI)
+# - jina (for Jina Reader API)
