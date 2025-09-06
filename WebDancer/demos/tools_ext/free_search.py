@@ -12,13 +12,32 @@ from urllib.parse import urlencode
 def search_web(query: str, num_results: int = 8) -> List[Dict[str, Any]]:
     """
     Search the web for text results
-    Priority: Serper API > SerpAPI > DuckDuckGo (free)
+    Priority: Exa.ai > Serper API > SerpAPI > DuckDuckGo (free)
     """
     
-    # Try Serper API first (preferred)
+    # Try Exa.ai first (best for AI research)
+    exa_key = os.getenv('EXA_API_KEY')
+    if exa_key:
+        try:
+            print(f"🔍 Using Exa.ai neural search for: {query}")
+            return _search_exa(query, num_results, exa_key)
+        except Exception as e:
+            print(f"Exa.ai search failed: {e}, falling back...")
+    
+    # Try Tavily AI (free tier available)
+    tavily_key = os.getenv('TAVILY_API_KEY')
+    if tavily_key:
+        try:
+            print(f"🔍 Using Tavily AI search for: {query}")
+            return _search_tavily(query, num_results, tavily_key)
+        except Exception as e:
+            print(f"Tavily AI search failed: {e}, falling back...")
+    
+    # Try Serper API (Google Search)
     serper_key = os.getenv('GOOGLE_SEARCH_KEY') or os.getenv('SERPER_API_KEY')
     if serper_key:
         try:
+            print(f"🔍 Using Google Search (Serper) for: {query}")
             return _search_serper(query, num_results, serper_key)
         except Exception as e:
             print(f"Serper API failed: {e}, falling back...")
@@ -27,15 +46,17 @@ def search_web(query: str, num_results: int = 8) -> List[Dict[str, Any]]:
     serpapi_key = os.getenv('SERPAPI_API_KEY')
     if serpapi_key:
         try:
+            print(f"🔍 Using Google Search (SerpAPI) for: {query}")
             return _search_serpapi(query, num_results, serpapi_key)
         except Exception as e:
             print(f"SerpAPI failed: {e}, falling back...")
     
     # Fall back to DuckDuckGo (free)
     try:
+        print(f"🔍 Using DuckDuckGo (free) search for: {query}")
         return _search_duckduckgo(query, num_results)
     except Exception as e:
-        print(f"DuckDuckGo search failed: {e}")
+        print(f"❌ DuckDuckGo search failed: {e}")
         return []
 
 def search_images(query: str, num_results: int = 6) -> List[Dict[str, Any]]:
@@ -187,6 +208,87 @@ def _search_images_duckduckgo(query: str, num_results: int) -> List[Dict[str, An
         }
         for result in results[:num_results]
     ]
+
+def _search_exa(query: str, num_results: int, api_key: str) -> List[Dict[str, Any]]:
+    """Search using Exa.ai (high-quality AI-focused search)"""
+    
+    headers = {
+        'x-api-key': api_key,
+        'Content-Type': 'application/json'
+    }
+    
+    data = {
+        'query': query,
+        'numResults': num_results,
+        'type': 'neural',  # Use neural search for better AI/research results
+        'contents': {
+            'text': True,
+            'highlights': True
+        }
+    }
+    
+    url = "https://api.exa.ai/search"
+    
+    response = requests.post(url, headers=headers, json=data, timeout=30)
+    response.raise_for_status()
+    
+    results = response.json()
+    
+    search_results = []
+    for result in results.get('results', [])[:num_results]:
+        # Extract highlights or use text content
+        content = ""
+        if result.get('highlights'):
+            content = " ".join(result['highlights'][:3])  # First 3 highlights
+        elif result.get('text'):
+            content = result['text'][:300] + "..." if len(result['text']) > 300 else result['text']
+        
+        search_results.append({
+            'title': result.get('title', ''),
+            'link': result.get('url', ''),
+            'snippet': content,
+            'source': 'exa.ai',
+            'score': result.get('score', 0),
+            'published_date': result.get('publishedDate', '')
+        })
+    
+    return search_results
+
+def _search_tavily(query: str, num_results: int, api_key: str) -> List[Dict[str, Any]]:
+    """Search using Tavily AI (has free tier)"""
+    
+    headers = {
+        'Content-Type': 'application/json'
+    }
+    
+    data = {
+        'api_key': api_key,
+        'query': query,
+        'search_depth': 'basic',  # Use 'advanced' for deeper search with more tokens
+        'max_results': num_results,
+        'include_answer': False,  # We'll synthesize our own answer
+        'include_raw_content': True
+    }
+    
+    url = "https://api.tavily.com/search"
+    
+    response = requests.post(url, headers=headers, json=data, timeout=30)
+    response.raise_for_status()
+    
+    results = response.json()
+    
+    search_results = []
+    for result in results.get('results', [])[:num_results]:
+        search_results.append({
+            'title': result.get('title', ''),
+            'link': result.get('url', ''),
+            'snippet': result.get('content', '')[:300] + "..." if len(result.get('content', '')) > 300 else result.get('content', ''),
+            'source': 'tavily',
+            'score': result.get('score', 0),
+            'published_date': result.get('published_date', '')
+        })
+    
+    return search_results
 
 # Test functions
 if __name__ == "__main__":
